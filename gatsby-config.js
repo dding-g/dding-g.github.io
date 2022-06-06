@@ -1,14 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: `dding-g blog`,
+    title: "dding-glog",
     author: {
-      name: `MyeongGeunJo`,
+      name: "myeonggeun.jo",
       summary: "Web developer. Front-end",
     },
-    description: `ddingg의 블로그`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: "ddingg의 블로그",
+    siteUrl: "https://dding-g.github.io",
     social: {
-      instagram: `https://www.instagram.com/dding_gg/`,
+      instagram: "https://www.instagram.com/dding_gg/",
     },
   },
   plugins: [

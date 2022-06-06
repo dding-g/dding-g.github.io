@@ -56,6 +56,7 @@ const Bio = () => {
       </div>
       <div>
         <p>조명근</p>
+        <small>area409@gmail.com</small>
         <small>웹 개발자, 프론트엔드</small>
       </div>
     </div>

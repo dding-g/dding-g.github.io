@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-blog",
+  "name": "dding-glog",
   "private": true,
-  "description": "A starter for a blog powered by Gatsby and Markdown",
+  "description": "조명근 개인 blog",
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "bugs": {
