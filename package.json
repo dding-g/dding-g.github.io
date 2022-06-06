@@ -25,6 +25,7 @@
     "gatsby-source-filesystem": "^4.15.0",
     "gatsby-transformer-remark": "^5.15.1",
     "gatsby-transformer-sharp": "^4.15.1",
+    "gh-pages": "^4.0.0",
     "prismjs": "^1.28.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
@@ -51,6 +52,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
+    "deploy": "gatsby build && gh-pages -d public -b deploy",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }
