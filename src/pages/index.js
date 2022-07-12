@@ -12,7 +12,7 @@ const BlogIndex = ({ data, location }) => {
   if (posts.length === 0) {
     return (
       <Layout location={location} title={siteTitle}>
-        <Seo title="All posts" />
+        <Seo title="모든 포스트" />
         <Bio />
         <p>포스트가 없습니다.</p>
       </Layout>
@@ -21,7 +21,7 @@ const BlogIndex = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Seo title="All posts" />
+      <Seo title="모든 포스트" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
         {posts.map(post => {

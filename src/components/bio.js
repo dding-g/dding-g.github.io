@@ -47,8 +47,16 @@ const Bio = () => {
           target="_blank"
         >
           <StaticImage
-            src="../images/notion.png"
+            src="../images/notion_default.png"
             alt="github"
+            width={20}
+            height={20}
+          />
+        </a>
+        <a href="https://ddingg.tistory.com/" target="_blank">
+          <StaticImage
+            src="../images/tistory-logo.svg"
+            alt="tistory"
             width={20}
             height={20}
           />
