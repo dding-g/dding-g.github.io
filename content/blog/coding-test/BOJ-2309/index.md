@@ -1,6 +1,6 @@
 ---
 title: BOJ-2309
-date: Wed Jul 13 2022 23:04:54 GMT+0900 (대한민국 표준시)
+date: "2022-07-13T14:04:54.000Z"
 description: 일곱난쟁이
 tags:
   - 백준

@@ -3,8 +3,8 @@ to: content/blog/<%=path%>/<%=title%>/index.md
 ---
 
 ---
-title: <%=title%>
-date: <%=new Date().toString()%>
+title: "<%=title%>"
+date: "<%=new Date().toISOString()%>"
 description: <설명>
 tags:
   - 태그1

@@ -1,6 +1,6 @@
 ---
 title: BOJ-2693
-date: Thu Jul 14 2022 00:01:40 GMT+0900 (대한민국 표준시)
+date: "2022-07-14T00:12:03.284Z"
 description: N번쨰 큰 수 (https://www.acmicpc.net/problem/2693)
 tags:
   - 백준
