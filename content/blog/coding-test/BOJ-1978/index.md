@@ -1,6 +1,6 @@
 ---
 title: BOJ-1978
-date: Thu Jul 14 2022 00:13:33 GMT+0900 (대한민국 표준시)
+date: "2022-07-14T00:04:54.000Z"
 description: 소수 찾기 (https://www.acmicpc.net/problem/1978)
 tags:
   - 백준
