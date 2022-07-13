@@ -56,6 +56,6 @@
     "deploy": "gatsby build && rm -rf node_modules/.cache/gh-pages && gh-pages -d public -b gh-pages",
     "deploy:only": "rm -rf node_modules/.cache/gh-pages && gh-pages -d public",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "hygen:post": "hygen post new with-prompt"
+    "new:post": "hygen post new with-prompt"
   }
 }
