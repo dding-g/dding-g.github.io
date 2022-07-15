@@ -7,7 +7,7 @@ title: "<%=title%>"
 date: "<%=new Date().toISOString()%>"
 description: <설명>
 tags:
-  - 태그1
+  - <%=category === "coding-test" ? "코딩테스트" : "태그1"%>
   - 태그2
 ---
 
