@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[TIL]]></description><link>https://dding-g.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 13 Jul 2022 16:02:27 GMT</lastBuildDate><item><title><![CDATA[코딩테스트 로드맵]]></title><description><![CDATA[순서 여기 블로그에서 제시한 로드맵 바탕으로 따라갑니다. 풀이 현황 코딩테스트 시작을 위한 백준문제 추천 시작 & 구현 백준 2438번. 별 찍기 - 1 백준 2439번. 별 찍기 - 2 백준 2440번. 별 찍기 - 3 백준 244…]]></description><link>https://dding-g.github.io/coding-test/코딩테스트 로드맵/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/코딩테스트 로드맵/</guid><pubDate>Thu, 14 Jul 2022 01:04:54 GMT</pubDate><content:encoded>&lt;h2&gt;순서&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[TIL]]></description><link>https://dding-g.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 15 Jul 2022 16:27:45 GMT</lastBuildDate><item><title><![CDATA[이벤트 루프는 무엇인가요?]]></title><description><![CDATA[youtube : 이벤트 루프는 무엇인가요 브라우저 동작 과정
+2014년 영상이지만 Event loop와 브라우저에서 Javascript가 동작하는 과정을 너무 잘 설명한 영상. JS…]]></description><link>https://dding-g.github.io/study-js/이벤트 루프는 무엇인가요?/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/이벤트 루프는 무엇인가요?/</guid><pubDate>Fri, 15 Jul 2022 13:05:33 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;#x26;t=12s&quot;&gt;youtube : 이벤트 루프는 무엇인가요&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/static/images/eventloop/eventloop.jpeg&quot; alt=&quot;브라우저 동작 과정&quot;&gt;
+2014년 영상이지만 Event loop와 브라우저에서 Javascript가 동작하는 과정을 너무 잘 설명한 영상.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;JS는 싱글스레드임. 결국 한번에 하나의 스레드만 실행할 수 있다. 동시에 하나의 코드만 실행할 수 있다는 뜻.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;콜 스택은 데이터 스트럭처로 실행되는 순서를 기억하고 있다. 스택의 가장 위 쪽에서 함수를 꺼내는게 전부다. 아래 사진처럼 에러가 나게 되면 callstack을 역순으로 출력해 보여준다.
+&lt;img src=&quot;/static/images/FE%20%EB%A9%B4%EC%A0%91%20%EC%A7%88%EB%AC%B8%20%EC%97%B0%EC%8A%B5/callstack.png&quot; alt=&quot;callstack&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Maximum Call Stack Size Exceeded&lt;/code&gt; 에러는 이런 callstack에 너무 많은 데이터가 쌓여있다는 뜻 이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;blocking&lt;/code&gt; : 느려진다는건 어떤 걸 의미하나요?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;느린 동작이 스택에 남아있는 것을 blocking이라고 함.&lt;/li&gt;
+&lt;li&gt;네트워크 요청은 컴퓨터 입장에서는 느림.&lt;/li&gt;
+&lt;li&gt;자연스러운 UI UX를 위해서는 callstack이 blocking되는건 막아야함.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;setTimeout&lt;/code&gt;이 실행되는 과정
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;setTimeout&lt;/code&gt;은 callstack에 들어온 직후 사라진다. (꺼내진다)&lt;/li&gt;
+&lt;li&gt;여기서 &lt;code class=&quot;language-text&quot;&gt;동시성&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;이벤트 루프&lt;/code&gt;를 설명할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;동시성&lt;/code&gt;과 &lt;code class=&quot;language-text&quot;&gt;이벤트 루프&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;webapis&lt;/code&gt; 과 js runtime 환경은 다르다. &lt;code class=&quot;language-text&quot;&gt;setTimeout&lt;/code&gt;은 js runtime 환경에서 실행된 직후 &lt;code class=&quot;language-text&quot;&gt;webapis&lt;/code&gt;로 옮겨진 뒤 timer가 실행된다.&lt;/li&gt;
+&lt;li&gt;WebApi에서 완료된 테스크의 callback은 task queue로 들어가게 된다.&lt;/li&gt;
+&lt;li&gt;이벤트 루프의 역할은 callstack과 task queue를 주시하고 있는 것 이다. callstack이 &lt;strong&gt;비어있으면&lt;/strong&gt; task queue 최상위 값을 빼서 stack에 넣어준다.
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token function&quot;&gt;setTimeout&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;TIMEOUT 0!!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+를 다른 코드와 같이 실행시켜보면 call stack이 빈 후에 이벤트 루프가 동작한다는걸 알 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[코딩테스트 로드맵]]></title><description><![CDATA[순서 여기 블로그에서 제시한 로드맵 바탕으로 따라갑니다. 풀이 현황 코딩테스트 시작을 위한 백준문제 추천 시작 & 구현 백준 2438번. 별 찍기 - 1 백준 2439번. 별 찍기 - 2 백준 2440번. 별 찍기 - 3 백준 244…]]></description><link>https://dding-g.github.io/coding-test/코딩테스트 로드맵/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/코딩테스트 로드맵/</guid><pubDate>Thu, 14 Jul 2022 01:04:54 GMT</pubDate><content:encoded>&lt;h2&gt;순서&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://covenant.tistory.com/235&quot;&gt;여기 블로그&lt;/a&gt;에서 제시한 로드맵 바탕으로 따라갑니다.&lt;/li&gt;
 &lt;/ul&gt;
@@ -212,11 +253,7 @@ stations&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;maxCnt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[Vue] Vuex 정리]]></title><description><![CDATA[Vuex 지금은 Pinia가 vue의 공식적인 default 상태관리 라이브러리가 되었지만, 그 전까지 Vuex가 대중적으로 사용되었다. 앞으로 Vuex에는 새로운 기능이 추가되지는 않고 로 migration…]]></description><link>https://dding-g.github.io/study-vue/[Vue] Vuex 정리/</link><guid isPermaLink="false">https://dding-g.github.io/study-vue/[Vue] Vuex 정리/</guid><pubDate>Wed, 13 Jul 2022 19:46:03 GMT</pubDate><content:encoded>&lt;h2&gt;Vuex&lt;/h2&gt;
-&lt;blockquote&gt;
-&lt;p&gt;지금은 &lt;a href=&quot;https://pinia.vuejs.org/&quot;&gt;Pinia&lt;/a&gt;가 vue의 공식적인 default 상태관리 라이브러리가 되었지만, 그 전까지 Vuex가 대중적으로 사용되었다. 앞으로 Vuex에는 새로운 기능이 추가되지는 않고 &lt;code class=&quot;language-text&quot;&gt;Pinia&lt;/code&gt;로 migration하거나 새로운 프로젝트에서는 &lt;code class=&quot;language-text&quot;&gt;Pinia&lt;/code&gt;로 시작하는걸 강력하게 권장하고 있다.
-이 글은 &lt;a href=&quot;https://vuex.vuejs.org/&quot;&gt;공식 docuemnt&lt;/a&gt;를 훑어보면서 필자가 생각하는 핵심이라고 여겨지는 내용들을 적어둘 예정이다.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[BOJ-2309]]></title><description><![CDATA[교훈 forEach는 return으로 멈출 수 없습니다.]]></description><link>https://dding-g.github.io/coding-test/BOJ-2309/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-2309/</guid><pubDate>Wed, 13 Jul 2022 14:04:54 GMT</pubDate><content:encoded>&lt;h2&gt;교훈&lt;/h2&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;maxCnt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[BOJ-2309]]></title><description><![CDATA[교훈 forEach는 return으로 멈출 수 없습니다.]]></description><link>https://dding-g.github.io/coding-test/BOJ-2309/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-2309/</guid><pubDate>Wed, 13 Jul 2022 14:04:54 GMT</pubDate><content:encoded>&lt;h2&gt;교훈&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;forEach는 return으로 멈출 수 없습니다.&lt;/li&gt;
 &lt;/ul&gt;
