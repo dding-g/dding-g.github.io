@@ -1,5 +1,5 @@
 ---
-to: content/blog/<%=path%>/<%=title%>/index.md
+to: content/blog/<%=category%>/<%=title%>/index.md
 ---
 
 ---

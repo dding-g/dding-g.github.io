@@ -6,15 +6,22 @@ const dir = fs.readdirSync("content/blog", { withFileTypes: true })
 
 const directories = dir.filter(d => d.isDirectory()).map(d => d.name)
 
-module.exports = [
-  {
-    type: "input",
-    name: "path",
-    message: `글 경로. 아래 중 골라주세요.\n${directories.join(", ")} : `,
-  },
-  {
-    type: "input",
-    name: "title",
-    message: `타이틀`,
-  },
-]
+module.exports = {
+  prompt: ({ prompter, args }) =>
+    prompter
+      .select({
+        type: "input",
+        name: "category",
+        message: "카테고리를 선택하세요.",
+        choices: directories,
+      })
+      .then(category =>
+        prompter
+          .prompt({
+            type: "input",
+            name: "title",
+            message: `타이틀`,
+          })
+          .then(({ title }) => ({ title, category }))
+      ),
+}
