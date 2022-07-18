@@ -349,3 +349,11 @@ a:focus {
     list-style-position: inside;
   }
 }
+
+/*
+  ==== custom style ====
+*/
+
+img {
+  max-width: var(--maxWidth-lg);
+}
