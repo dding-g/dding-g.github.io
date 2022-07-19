@@ -1,4 +1,181 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[TIL]]></description><link>https://dding-g.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 15 Jul 2022 16:35:43 GMT</lastBuildDate><item><title><![CDATA[BOJ-14888]]></title><description><![CDATA[포인트 억까의 극치.   을 구분해줘야함. 백트래킹 문제]]></description><link>https://dding-g.github.io/coding-test/BOJ-14888/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-14888/</guid><pubDate>Fri, 15 Jul 2022 14:18:58 GMT</pubDate><content:encoded>&lt;h2&gt;포인트&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[TIL]]></description><link>https://dding-g.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 19 Jul 2022 16:01:11 GMT</lastBuildDate><item><title><![CDATA[BOJ-3085]]></title><description><![CDATA[로직은 알겠으나 너무 구현에 시간이 많이 들 것 같아 중간에 패스]]></description><link>https://dding-g.github.io/coding-test/BOJ-3085/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-3085/</guid><pubDate>Tue, 19 Jul 2022 13:42:54 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;로직은 알겠으나 너무 구현에 시간이 많이 들 것 같아 중간에 패스&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; fs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;fs&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;num&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;arr&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readFileSync&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;./test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; maxContinuous &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; board &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;v&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; v&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// X, Y축 최대 연속 값 산출&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; num&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; continuousX &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; continuousY &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; num&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    continuousX&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;board&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    continuousY&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;board&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// 4개가 연속해도 set에는 1개가 들어가 있으니 모든 연속된 사탕 개수를 구하려면 +1 이 필요&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; temp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;max&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;num &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; continuousX&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; continuousY&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; continuous &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; temp &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; temp &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;continuous &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; maxContinuous&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    maxContinuous &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; continuous
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;maxContinuous &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; num&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;num&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  process&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;exit&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;search&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token parameter&quot;&gt;pickArr&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; temp &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;pickArr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; continuous &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; temp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; temp&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;size&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;continuous &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; maxContinuous&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    maxContinuous &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; continuous
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; num&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; num&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; j&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;board&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;!==&lt;/span&gt; board&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; tempXArr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;board&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+      tempXArr&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; board&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+      tempXArr&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; board&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;j&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+      &lt;span class=&quot;token comment&quot;&gt;// 바꾼 j, j-1 세로열까지 바꾸고 search 돌리기.&lt;/span&gt;
+
+      &lt;span class=&quot;token function&quot;&gt;search&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;tempXArr&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 위 X열 서로 바꾼 것 처럼 Y열도 세로로 바꾸기. array X, Y 대칭&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[홈페이지가 사용자에게 보이기까지]]></title><description><![CDATA[순서 정리 www.google.com 을 주소창에 타이핑하고 Enter키를 누른다. DNS에서 www.google.com 을 찾아 등록된 IP로 Get Request를 보낸다. 반환된 html…]]></description><link>https://dding-g.github.io/study-cs/홈페이지가 사용자에게 보이기까지/</link><guid isPermaLink="false">https://dding-g.github.io/study-cs/홈페이지가 사용자에게 보이기까지/</guid><pubDate>Tue, 19 Jul 2022 06:59:07 GMT</pubDate><content:encoded>&lt;h2&gt;순서 정리&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.google.com&quot;&gt;www.google.com&lt;/a&gt; 을 주소창에 타이핑하고 Enter키를 누른다.&lt;/li&gt;
+&lt;li&gt;DNS에서 &lt;a href=&quot;http://www.google.com&quot;&gt;www.google.com&lt;/a&gt; 을 찾아 등록된 IP로 Get Request를 보낸다.&lt;/li&gt;
+&lt;li&gt;반환된 html을 렌더링 한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;크게보면 위와 같다.
+조금 더 상세하게 알자보자.&lt;/p&gt;
+&lt;h3&gt;DNS에서 &lt;a href=&quot;http://www.google.com%EC%9D%84&quot;&gt;www.google.com을&lt;/a&gt; 찾는다.&lt;/h3&gt;
+&lt;p&gt;DNS는 &lt;code class=&quot;language-text&quot;&gt;.&lt;/code&gt; 으로 나눠진 레벨별로 검색을 한다.
+맨 처음 &lt;code class=&quot;language-text&quot;&gt;Top-level&lt;/code&gt;에서는 &lt;code class=&quot;language-text&quot;&gt;.com&lt;/code&gt; 에서 &lt;code class=&quot;language-text&quot;&gt;google.com&lt;/code&gt; 으로 redirect 시켜주고
+&lt;code class=&quot;language-text&quot;&gt;Second-level&lt;/code&gt;에서는 &lt;code class=&quot;language-text&quot;&gt;google.com&lt;/code&gt;에서 &lt;code class=&quot;language-text&quot;&gt;www.google.com&lt;/code&gt;으로 redirect 시켜준다.
+마지막 &lt;code class=&quot;language-text&quot;&gt;Third-level&lt;/code&gt;에서는 &lt;code class=&quot;language-text&quot;&gt;www.google.com&lt;/code&gt;에 해당하는 ip주소를 검색해서 브라우저로 return한다.&lt;/p&gt;
+&lt;h3&gt;브라우저에서 google로&lt;/h3&gt;
+&lt;p&gt;브라우저는 DNS로 부터 받은 ip주소에 HTTP통신을 요청한다.
+그전에 &lt;code class=&quot;language-text&quot;&gt;TCP/IP&lt;/code&gt; 통신의 &lt;code class=&quot;language-text&quot;&gt;TCP/IP 3 way handshake&lt;/code&gt; 방식으로 connection을 먼저 맻어야 한다.
+&lt;code class=&quot;language-text&quot;&gt;TCP/IP 3 way handshake&lt;/code&gt;는 아래 순서로 이뤄진다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Client → Server &lt;code class=&quot;language-text&quot;&gt;SYN(Synchronize Sequence Number)&lt;/code&gt;
+&lt;ol&gt;
+&lt;li&gt;Client가 SYNC 패킷을 서버에 보내면 Client는 서버의 &lt;code class=&quot;language-text&quot;&gt;SYN/ACK&lt;/code&gt;응답을 기다리는 상태가 된다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Server → Client &lt;code class=&quot;language-text&quot;&gt;SYN + ACK(Acknowledgement)&lt;/code&gt;
+&lt;ol&gt;
+&lt;li&gt;Server는 Client에 요청을 수락한다는 &lt;code class=&quot;language-text&quot;&gt;SYN + ACK&lt;/code&gt; 요청을 보내게 되고 Client의 &lt;code class=&quot;language-text&quot;&gt;ACK&lt;/code&gt;를 기다리는 상태가 된다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Client → Server &lt;code class=&quot;language-text&quot;&gt;ACK&lt;/code&gt;
+&lt;ol&gt;
+&lt;li&gt;Client는 마지막으로 Server에게 &lt;code class=&quot;language-text&quot;&gt;ACK&lt;/code&gt; 요청을 보내고 Server와 Client가 통신할 수 있게 된다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;다음은 HTTP request를 날린다.
+Client는 &lt;code class=&quot;language-text&quot;&gt;www.google.com&lt;/code&gt;에 할당된 IP로 GET request를 날리고
+Server는 요청을 처리하고 response data를 생성한다.
+이후에 Status code등 각종 메타 데이터를 포함한 HTTP response를 Client로 보내주고
+최종적으로 Client는 받은 데이터를 브라우저에 보여준다.&lt;/p&gt;
+&lt;h3&gt;브라우저 HTML 렌더링&lt;/h3&gt;
+&lt;p&gt;브라우저의 주요 기능은 선택한 자원을 서버에 요청하고 브라우저에 표시하는 것 이다. 보통 HTML문서 이지만 PDF, 이미지 등 다른 형태일 수 있고 자원의 주소는 URI(Uniform Resource Identifier)에 의해 정해진다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;렌더링 엔진&lt;/strong&gt;
+사파리는 &lt;code class=&quot;language-text&quot;&gt;Webkit&lt;/code&gt;, 파이어폭스 모질라에서 직접 만든 &lt;code class=&quot;language-text&quot;&gt;게코(Gecko)&lt;/code&gt;, 크롬은 Webkit 베이스로 제작한 &lt;code class=&quot;language-text&quot;&gt;블링크&lt;/code&gt; 를 사용한다.&lt;/p&gt;
+&lt;p&gt;렌더링 엔진은 아래와 같은 순서로 동작한다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;DOM트리 구축을 위한 HTML파싱 → 렌더 트리 구축 → 렌더 트리 배치 → 렌더 트리 그리기&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://d2.naver.com/content/images/2015/06/helloworld-59361-3.png&quot; alt=&quot;Webkit 동작 과정&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;참고 자료&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/59361&quot;&gt;Naver D2 - 브라우저는 어떻게 동작하는가?&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://devjin-blog.com/what-happen-browser-search/&quot;&gt;[번역] Browser에 www.google.com을 검색하면 어떤 일이 일어날까?
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[BOJ-1062]]></title><link>https://dding-g.github.io/coding-test/BOJ-1062/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-1062/</guid><pubDate>Mon, 18 Jul 2022 14:04:13 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[JSConf: Inside of loop]]></title><description><![CDATA[1번에서 우리는 el이 dom에 append 되고 style을 바꾸면 혹시나 사용자에게 보일까봐 2번처럼 바꾼다.실제 그렇지는 않지만. 이벤트 루프 덕분에 1번처럼 코드를 작성해도 style을 바꾸는 코드와 append…]]></description><link>https://dding-g.github.io/study-js/JSConf: Inside of loop/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/JSConf: Inside of loop/</guid><pubDate>Sat, 16 Jul 2022 10:40:51 GMT</pubDate><content:encoded>&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 1번...&lt;/span&gt;
+document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;body&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;el&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+el&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;display &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;none&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 2번...&lt;/span&gt;
+el&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;display &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;none&quot;&lt;/span&gt;
+document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;body&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;appendChild&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;el&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;1번에서 우리는 el이 dom에 append 되고 style을 바꾸면 혹시나 사용자에게 보일까봐 2번처럼 바꾼다.실제 그렇지는 않지만.&lt;/li&gt;
+&lt;li&gt;이벤트 루프 덕분에 1번처럼 코드를 작성해도 style을 바꾸는 코드와 append하는 코드는 서로 “경합”상태가 아니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;어떻게 이런게 가능할까?&lt;/p&gt;
+&lt;p&gt;웹페이지에는 메인 스레드가 있다.
+보통 코드가 실행될 떄는 코드가 경합될 일이 거의 없지만 메인 스레드가 처리되는 시간이 길어지면(Promise) UI UX는 blocking되는 상태로 보인다. 싱글 스레드 이기 떄문에. 채기를 할 때는 인간도 싱글 스레드가 된다. 이때 차를 운전중이면 위험한 상태가 될 거고 재채기를 할 때는 아무것도 할 수 없게 된다.
+재채기 같은 코드는 피해야한다.&lt;/p&gt;
+&lt;h3&gt;렌더링&lt;/h3&gt;
+&lt;p&gt;위 예시에서 1번 2번 코드는 순서가 혼용되어도 상관없다고 했다. 왜 그럴까?
+Javascript는 항상 렌더링 전에 작업을 완료한다. 즉, Javascript 단계 이후에 랜더링 단계로 넘어간다.
+이게 이벤트 루프가 해주는 일 중 하나이다.
+테스크를 큐잉하는걸 &lt;code class=&quot;language-text&quot;&gt;setTimeout(callback, 0)&lt;/code&gt; 으로 하는건 좋지 않다.
+또한 animation을 위해 &lt;code class=&quot;language-text&quot;&gt;setTimeout&lt;/code&gt;을 사용하는건 좋지 않은 선택이며 timer나 네트워크 관련된 작업은 &lt;code class=&quot;language-text&quot;&gt;requestAnimationFrame&lt;/code&gt; 를 사용하는걸 추천한다.&lt;/p&gt;
+&lt;p&gt;js에서 이벤트를 먼저 처리하고 css가 변경되는 루프의 예시를 보자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtu.be/cCOL7MC4Pl0?t=1186&quot;&gt;동영상 링크&lt;/a&gt;에서 보면 더 이해하기 쉽다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;박스의 X 좌표를 0px -&gt; 1000px 으로 옮긴다.&lt;/li&gt;
+&lt;li&gt;X 좌표를 1000px -&gt; 500px로 옮긴다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;다음과 같은 작업은 어떤 코드에서 실행될 수 있을까?&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;button&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;click&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transform &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;translateX(1000px)&quot;&lt;/span&gt;
+  box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transition &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;transform 1s ease-in-out&quot;&lt;/span&gt;
+  box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transform &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;translateX(500px)&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;우리는 0 -&gt; 1000 -&gt; 500 으로 위치가 변하길 원한다.
+하지만 위 코드를 실행시켜보면 0 -&gt; 500 으로 위치가 변한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;button&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;click&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transform &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;translateX(1000px)&quot;&lt;/span&gt;
+  box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transition &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;transform 1s ease-in-out&quot;&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;requestAnimationFrame&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transform &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;translateX(500px)&quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이건 어떨까?
+여전히 0 -&gt; 500으로 변한다.&lt;/p&gt;
+&lt;p&gt;Javascript단계에서는 1000px 까지 옮겨졌다.
+하지만 렌더링 되기 직전에 requestAnimationFrame이 실행되면서 다시 500px로 옮겼기 때문에 최종 렌더링 에서는 500px로 보인다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;button&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;click&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transform &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;translateX(1000px)&quot;&lt;/span&gt;
+  box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transition &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;transform 1s ease-in-out&quot;&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;requestAnimationFrame&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;requestAnimationFrame&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      box&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;transform &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;translateX(500px)&quot;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이제 우리가 원하는 결과가 나온다.
+Javascript -&gt; requestAnimationFr ame -&gt; 렌더링 -&gt; requestAnimationFrame -&gt; 렌더링 단계로 수행하기 때문이다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;다만 edge, safari의 경우 rAF를 paint 뒤 단계에서 실행하기 때문에 순서가 조금 바뀌어야 할 수 있다.
+&lt;code class=&quot;language-text&quot;&gt;getComputedStyle&lt;/code&gt;을 사용해서 같은 결과를 만들 수 있다. 하지만 chrome에서만 동작한다.&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[BOJ-2504]]></title><description><![CDATA[내용]]></description><link>https://dding-g.github.io/coding-test/BOJ-2504/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-2504/</guid><pubDate>Sat, 16 Jul 2022 00:23:40 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;내용&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[BOJ-14888]]></title><description><![CDATA[포인트 억까의 극치.   을 구분해줘야함. 백트래킹 문제]]></description><link>https://dding-g.github.io/coding-test/BOJ-14888/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-14888/</guid><pubDate>Fri, 15 Jul 2022 14:18:58 GMT</pubDate><content:encoded>&lt;h2&gt;포인트&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;억까의 극치.&lt;/li&gt;
 &lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;-0&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;+0&lt;/code&gt; 을 구분해줘야함.&lt;/li&gt;
@@ -95,20 +272,34 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
   console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;decimal&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
   console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[이벤트 루프는 무엇인가요?]]></title><description><![CDATA[youtube : 이벤트 루프는 무엇인가요 브라우저 동작 과정
-2014년 영상이지만 Event loop와 브라우저에서 Javascript가 동작하는 과정을 너무 잘 설명한 영상. JS…]]></description><link>https://dding-g.github.io/study-js/이벤트 루프는 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/이벤트 루프는 무엇인가요/</guid><pubDate>Fri, 15 Jul 2022 13:05:33 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;#x26;t=12s&quot;&gt;youtube : 이벤트 루프는 무엇인가요&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/static/images/eventloop/eventloop.jpeg&quot; alt=&quot;브라우저 동작 과정&quot;&gt;
-2014년 영상이지만 Event loop와 브라우저에서 Javascript가 동작하는 과정을 너무 잘 설명한 영상.&lt;/p&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[BOJ-1292]]></title><description><![CDATA[포인트 Array.slice 는 start index ~ end - 1 index 까지 잘라 새로운 배열을 만든다.]]></description><link>https://dding-g.github.io/coding-test/BOJ-1292/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-1292/</guid><pubDate>Fri, 15 Jul 2022 13:13:55 GMT</pubDate><content:encoded>&lt;h2&gt;포인트&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;JS는 싱글스레드임. 결국 한번에 하나의 스레드만 실행할 수 있다. 동시에 하나의 코드만 실행할 수 있다는 뜻.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;콜 스택은 데이터 스트럭처로 실행되는 순서를 기억하고 있다. 스택의 가장 위 쪽에서 함수를 꺼내는게 전부다. 아래 사진처럼 에러가 나게 되면 callstack을 역순으로 출력해 보여준다.
-&lt;img src=&quot;/static/images/FE%20%EB%A9%B4%EC%A0%91%20%EC%A7%88%EB%AC%B8%20%EC%97%B0%EC%8A%B5/callstack.png&quot; alt=&quot;callstack&quot;&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;Maximum Call Stack Size Exceeded&lt;/code&gt; 에러는 이런 callstack에 너무 많은 데이터가 쌓여있다는 뜻 이다.&lt;/li&gt;
+&lt;li&gt;Array.slice 는 start index ~ end - 1 index 까지 잘라 새로운 배열을 만든다.&lt;/li&gt;
 &lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; fs &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;fs&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;start&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; end&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; fs&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;readFileSync&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;/dev/stdin&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;toString&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;trim&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; arr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; currValue &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; end&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; currValue&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;currValue&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+  currValue&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;arr&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;slice&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;start &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; end&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;reduce&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&gt;&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[이벤트 루프는 무엇인가요?]]></title><description><![CDATA[youtube : 이벤트 루프는 무엇인가요 브라우저 동작 과정 2014년 영상이지만 Event loop와 브라우저에서 Javascript가 동작하는 과정을 너무 잘 설명한 영상. JS…]]></description><link>https://dding-g.github.io/study-js/이벤트 루프는 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/이벤트 루프는 무엇인가요/</guid><pubDate>Fri, 15 Jul 2022 13:05:33 GMT</pubDate><content:encoded>&lt;h2&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8aGhZQkoFbQ&amp;#x26;t=12s&quot;&gt;youtube : 이벤트 루프는 무엇인가요&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/eventloop.jpeg&quot; alt=&quot;브라우저 동작 과정&quot;&gt;&lt;/p&gt;
+&lt;p&gt;2014년 영상이지만 Event loop와 브라우저에서 Javascript가 동작하는 과정을 너무 잘 설명한 영상.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;JS는 싱글스레드임. 결국 한번에 하나의 스레드만 실행할 수 있다. 동시에 하나의 코드만 실행할 수 있다는 뜻.&lt;/li&gt;
+&lt;li&gt;콜 스택은 데이터 스트럭처로 실행되는 순서를 기억하고 있다. 스택의 가장 위 쪽에서 함수를 꺼내는게 전부다. 아래 사진처럼 에러가 나게 되면 callstack을 역순으로 출력해 보여준다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;/images/callstack.png&quot; alt=&quot;callstack&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Maximum Call Stack Size Exceeded&lt;/code&gt; 에러는 이런 callstack에 너무 많은 데이터가 쌓여있다는 뜻 이다.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;blocking&lt;/code&gt; : 느려진다는건 어떤 걸 의미하나요?&lt;/p&gt;
@@ -136,6 +327,73 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 를 다른 코드와 같이 실행시켜보면 call stack이 빈 후에 이벤트 루프가 동작한다는걸 알 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[FE 면접 질문 연습]]></title><description><![CDATA[참고 사이트 https://realmojo.tistory.com/300 https://xiubindev.tistory.com/119 CS 브라우저 주소창에 www.google.com을 입력하면 어떤 일이 일어나나요? GET, POST…]]></description><link>https://dding-g.github.io/study-cs/FE 면접 질문 연습/</link><guid isPermaLink="false">https://dding-g.github.io/study-cs/FE 면접 질문 연습/</guid><pubDate>Fri, 15 Jul 2022 12:04:15 GMT</pubDate><content:encoded>&lt;p&gt;참고 사이트&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://realmojo.tistory.com/300&quot;&gt;https://realmojo.tistory.com/300&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://xiubindev.tistory.com/119&quot;&gt;https://xiubindev.tistory.com/119&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;CS&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;브라우저 주소창에 &lt;a href=&quot;http://www.google.com%EC%9D%84&quot;&gt;www.google.com을&lt;/a&gt; 입력하면 어떤 일이 일어나나요?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;GET, POST가 어떻게 다른지 설명해주세요&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GET은 Idempotent, POST는 Non-idempotent하게 설계되어 있음.
+&lt;ul&gt;
+&lt;li&gt;멱등성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;서버에게 GET 요청을 여러번 보내도 같은 데이터를 가져옴.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Javascript&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;모듈 시스템의 차이점&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;cjs esm umd amd&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;호이스팅이 무엇인가요?&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;let const 는 호이스팅이 일어날까요? TDZ&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;클로저는 무엇인가요? 원리와 왜 사용하는지 설명해주세요.&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;함수를 반환하는 함수.
+은닉화&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;../../study-js/%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EB%A3%A8%ED%94%84%EB%8A%94%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94?/index.md&quot;&gt;&lt;strong&gt;이벤트 루프는 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;React&lt;/h2&gt;
+&lt;h2&gt;HTML CSS&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;CSS에서 margin과 padding에 대해서 설명해주세요&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;padding은 겹치지 않는데 margin은 겹친다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Frontend&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;홈페이지가 사용자에게 보이기 까지&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reflow repainting&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https://d2.naver.com/helloworld/59361&quot;&gt;Naver D2&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;ETC&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;자기소개&lt;/strong&gt;
+기술 스택, 전 회사 경력.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;debounce 쓰로틀링을 설명하고 두개의 차이를 설명하라&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;OOP 특징&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;OOP의 특징을 JS에서 어떻게 사용할 수 있는가?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;클로저 뭔지, 어떻게 사용하는지&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;프로토타입이 뭔지&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;JS에서 프로미스는 어떻게 동작하는지&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pending rejected fullfilled&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Arrow function 일반 function 차이&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;this 바인딩의 차이&lt;/li&gt;
+&lt;li&gt;딥다이브 책에 나와있음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;이벤트 루프에 대해서 설명을 해라&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;micro task queue와 일반 task queue와 다른점&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[코딩테스트 로드맵]]></title><description><![CDATA[순서 여기 블로그에서 제시한 로드맵 바탕으로 따라갑니다. 풀이 현황 코딩테스트 시작을 위한 백준문제 추천 시작 & 구현 백준 2438번. 별 찍기 - 1 백준 2439번. 별 찍기 - 2 백준 2440번. 별 찍기 - 3 백준 244…]]></description><link>https://dding-g.github.io/coding-test/코딩테스트 로드맵/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/코딩테스트 로드맵/</guid><pubDate>Thu, 14 Jul 2022 01:04:54 GMT</pubDate><content:encoded>&lt;h2&gt;순서&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://covenant.tistory.com/235&quot;&gt;여기 블로그&lt;/a&gt;에서 제시한 로드맵 바탕으로 따라갑니다.&lt;/li&gt;
@@ -206,8 +464,8 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;del&gt;- [ ] 최대공약수와 최소공배수 (🥈실버 5티어)&lt;/del&gt;&lt;/li&gt;
 &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; N번째 큰 수 (🥈실버 5티어)&lt;/li&gt;
 &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 소수 찾기 (🥈실버 4티어)&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 쉽게 푸는 문제 (🥈실버 4티어)&lt;/li&gt;
-&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; disabled&gt; 소수 (🥈실버 4티어)&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 쉽게 푸는 문제 (🥈실버 4티어)&lt;/li&gt;
+&lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; checked disabled&gt; 소수 (🥈실버 4티어)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;PART2. 약점 체크&lt;/h4&gt;
 &lt;ul class=&quot;contains-task-list&quot;&gt;
@@ -350,7 +608,30 @@ stations&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span c
   &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
 
-console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;maxCnt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[BOJ-2309]]></title><description><![CDATA[교훈 forEach는 return으로 멈출 수 없습니다.]]></description><link>https://dding-g.github.io/coding-test/BOJ-2309/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-2309/</guid><pubDate>Wed, 13 Jul 2022 14:04:54 GMT</pubDate><content:encoded>&lt;h2&gt;교훈&lt;/h2&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;maxCnt&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[Vue] Vuex 정리]]></title><description><![CDATA[Vuex 지금은 Pinia가 vue의 공식적인 default 상태관리 라이브러리가 되었지만, 그 전까지 Vuex가 대중적으로 사용되었다. 앞으로 Vuex에는 새로운 기능이 추가되지는 않고 로 migration…]]></description><link>https://dding-g.github.io/study-vue/[Vue] Vuex 정리/</link><guid isPermaLink="false">https://dding-g.github.io/study-vue/[Vue] Vuex 정리/</guid><pubDate>Wed, 13 Jul 2022 19:46:03 GMT</pubDate><content:encoded>&lt;h2&gt;Vuex&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;지금은 &lt;a href=&quot;https://pinia.vuejs.org/&quot;&gt;Pinia&lt;/a&gt;가 vue의 공식적인 default 상태관리 라이브러리가 되었지만, 그 전까지 Vuex가 대중적으로 사용되었다. 앞으로 Vuex에는 새로운 기능이 추가되지는 않고 &lt;code class=&quot;language-text&quot;&gt;Pinia&lt;/code&gt;로 migration하거나 새로운 프로젝트에서는 &lt;code class=&quot;language-text&quot;&gt;Pinia&lt;/code&gt;로 시작하는걸 강력하게 권장하고 있다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Getters&lt;/h3&gt;
+&lt;h3&gt;Setters&lt;/h3&gt;
+&lt;h3&gt;Mutations&lt;/h3&gt;
+&lt;p&gt;store에서 state를 변경할 수 있는 유일한 방법은 &lt;code class=&quot;language-text&quot;&gt;mutation&lt;/code&gt;으로 커밋하는 방법 뿐이다.
+&lt;code class=&quot;language-text&quot;&gt;mutaion&lt;/code&gt;은 이벤트와 비슷한데 각 뮤테이션은 string 타입과 handler를 가진다. 이 handler로 state를 수정할 수 있고 첫 parameter에 state를 받는다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; store &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;createStore&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;mutations&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;increment&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;state&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;token comment&quot;&gt;// mutate state&lt;/span&gt;
+      state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;count&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이 mutation handler를 호출할 때는 directly하게 호출할 수 없고, &lt;code class=&quot;language-text&quot;&gt;commit&lt;/code&gt;함수를 이용해서 호출 할 수있다.&lt;/p&gt;
+&lt;h3&gt;Actions&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;mutation&lt;/code&gt;과 비슷하다.&lt;/p&gt;
+&lt;h3&gt;모듈화&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[BOJ-2309]]></title><description><![CDATA[교훈 forEach는 return으로 멈출 수 없습니다.]]></description><link>https://dding-g.github.io/coding-test/BOJ-2309/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-2309/</guid><pubDate>Wed, 13 Jul 2022 14:04:54 GMT</pubDate><content:encoded>&lt;h2&gt;교훈&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;forEach는 return으로 멈출 수 없습니다.&lt;/li&gt;
 &lt;/ul&gt;
