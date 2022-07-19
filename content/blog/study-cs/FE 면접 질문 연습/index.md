@@ -49,7 +49,7 @@ tags:
 
 ## Frontend
 
-**홈페이지가 사용자게에 보이는 순서**
+**홈페이지가 사용자에게 보이기 까지**
 
 - reflow repainting
 
