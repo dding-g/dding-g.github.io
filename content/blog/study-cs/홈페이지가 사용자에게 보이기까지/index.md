@@ -45,13 +45,19 @@ Server는 요청을 처리하고 response data를 생성한다.
 
 브라우저의 주요 기능은 선택한 자원을 서버에 요청하고 브라우저에 표시하는 것 이다. 보통 HTML문서 이지만 PDF, 이미지 등 다른 형태일 수 있고 자원의 주소는 URI(Uniform Resource Identifier)에 의해 정해진다.
 
-**렌더링 엔진들**
-사파리와 크롬은 `Webkit`을 사용하고 파이어폭스 모질라에서 직접 만든 게코(Gecko)엔지을 사용한다.
+**렌더링 엔진**
+사파리는 `Webkit`, 파이어폭스 모질라에서 직접 만든 `게코(Gecko)`, 크롬은 Webkit 베이스로 제작한 `블링크` 를 사용한다.
+
+렌더링 엔진은 아래와 같은 순서로 동작한다.
+
+> DOM트리 구축을 위한 HTML파싱 &rarr; 렌더 트리 구축 &rarr; 렌더 트리 배치 &rarr; 렌더 트리 그리기
+
+![Webkit 동작 과정](https://d2.naver.com/content/images/2015/06/helloworld-59361-3.png)
 
 ---
 
 _참고 자료_
 
 - [Naver D2 - 브라우저는 어떻게 동작하는가?](https://d2.naver.com/helloworld/59361)
-- [[번역] Browser에 www.google.com을 검색하면 어떤 일이 일어날까?
-  ](https://devjin-blog.com/what-happen-browser-search/)
+- [Toast - 성능 최적화](https://ui.toast.com/fe-guide/ko_PERFORMANCE)
+- [번역 Browser에 www.google.com을 검색하면 어떤 일이 일어날까?](https://devjin-blog.com/what-happen-browser-search/)

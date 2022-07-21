@@ -39,6 +39,8 @@ tags:
 
 [**이벤트 루프는 무엇인가요?**](../../study-js/이벤트%20루프는%20무엇인가요?/index.md)
 
+**cjs esm의 차이, 왜 Typescript에서는 cjs를 사용하지 않을까?**
+
 ## React
 
 ## HTML CSS
