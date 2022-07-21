@@ -14,8 +14,6 @@ tags:
 
 ## CS
 
-**브라우저 주소창에 www.google.com을 입력하면 어떤 일이 일어나나요?**
-
 **GET, POST가 어떻게 다른지 설명해주세요**
 
 - GET은 Idempotent, POST는 Non-idempotent하게 설계되어 있음.
@@ -51,11 +49,7 @@ tags:
 
 ## Frontend
 
-**홈페이지가 사용자에게 보이기 까지**
-
-- reflow repainting
-
-> [Naver D2](https://d2.naver.com/helloworld/59361)
+[**홈페이지가 사용자에게 보이기 까지**](../홈페이지가%20사용자에게%20보이기까지/index.md)
 
 ## ETC
 
