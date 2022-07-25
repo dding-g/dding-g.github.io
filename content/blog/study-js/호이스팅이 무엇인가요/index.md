@@ -63,6 +63,9 @@ let variable
 `let`으로 선언한 `variable`은 그 직후 `not initialize` 상태를 갖고 아직 `undefined`로 초기화가 되기 전이다.
 `let/const`는 선언후에 아직 초기화가 되기 전 단계이기 때문에 `TDZ`에서 동작했다고 보는것이다.
 
+## 함수 호이스팅
+
+
 ---
 
 참고
