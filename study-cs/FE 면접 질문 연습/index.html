@@ -7,7 +7,6 @@
 <li><a href="https://xiubindev.tistory.com/119">https://xiubindev.tistory.com/119</a></li>
 </ul>
 <h2>CS</h2>
-<p><strong>브라우저 주소창에 <a href="http://www.google.com%EC%9D%84">www.google.com을</a> 입력하면 어떤 일이 일어나나요?</strong></p>
 <p><strong>GET, POST가 어떻게 다른지 설명해주세요</strong></p>
 <ul>
 <li>GET은 Idempotent, POST는 Non-idempotent하게 설계되어 있음.
@@ -18,20 +17,11 @@
 <li>서버에게 GET 요청을 여러번 보내도 같은 데이터를 가져옴.</li>
 </ul>
 <h2>Javascript</h2>
-<p><strong>모듈 시스템의 차이점</strong></p>
-<ul>
-<li>cjs esm umd amd</li>
-</ul>
-<p><strong>호이스팅이 무엇인가요?</strong></p>
-<ul>
-<li>let const 는 호이스팅이 일어날까요? TDZ</li>
-</ul>
-<p><strong>클로저는 무엇인가요? 원리와 왜 사용하는지 설명해주세요.</strong></p>
-<blockquote>
-<p>함수를 반환하는 함수.
-은닉화</p>
-</blockquote>
+<p><a href="../../study-js/Javascript%EC%97%90%EC%84%9C%EC%9D%98%20%EB%AA%A8%EB%93%88%20%EC%8B%9C%EC%8A%A4%ED%85%9C/index.md"><strong>모듈 시스템의 차이점</strong></a></p>
+<p><a href="../../study-js/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md"><strong>호이스팅이 무엇인가요?</strong></a></p>
+<p><a href="../../study-js/%ED%81%B4%EB%A1%9C%EC%A0%80%EA%B0%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md"><strong>클로저는 무엇인가요? 원리와 왜 사용하는지 설명해주세요.</strong></a></p>
 <p><a href="../../study-js/%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EB%A3%A8%ED%94%84%EB%8A%94%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94?/index.md"><strong>이벤트 루프는 무엇인가요?</strong></a></p>
+<p><strong>cjs esm의 차이, 왜 Typescript에서는 cjs를 사용하지 않을까?</strong></p>
 <h2>React</h2>
 <h2>HTML CSS</h2>
 <p><strong>CSS에서 margin과 padding에 대해서 설명해주세요</strong></p>
@@ -39,23 +29,39 @@
 <li>padding은 겹치지 않는데 margin은 겹친다.</li>
 </ul>
 <h2>Frontend</h2>
-<p><strong>홈페이지가 사용자에게 보이기 까지</strong></p>
-<ul>
-<li>reflow repainting</li>
-</ul>
-<blockquote>
-<p><a href="https://d2.naver.com/helloworld/59361">Naver D2</a></p>
-</blockquote>
+<p><a href="../%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B0%80%20%EC%82%AC%EC%9A%A9%EC%9E%90%EC%97%90%EA%B2%8C%20%EB%B3%B4%EC%9D%B4%EA%B8%B0%EA%B9%8C%EC%A7%80/index.md"><strong>홈페이지가 사용자에게 보이기 까지</strong></a></p>
 <h2>ETC</h2>
 <p><strong>자기소개</strong>
 기술 스택, 전 회사 경력.</p>
 <p><strong>debounce 쓰로틀링을 설명하고 두개의 차이를 설명하라</strong></p>
+<ul>
+<li>정리 필요</li>
+</ul>
 <p><strong>OOP 특징</strong></p>
 <ul>
-<li>OOP의 특징을 JS에서 어떻게 사용할 수 있는가?</li>
+<li>OOP의 특징을 JS에서 어떻게 사용할 수 있는가?
+<ul>
+<li>추상화</li>
+<li>캡슐화</li>
+<li>상속성</li>
+<li>다형성
+<ul>
+<li>같은 함수명을 다른 방식으로 사용하는 것. 오버라이딩, 오버로딩</li>
+<li>Javascript에서 오버라이딩, 오버로딩
+<ul>
+<li>오버로딩은 Javascript에서 지원하지 않는다. args 객체를 이용해서 구현할 수 있을 것 같음.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 <p><strong>클로저 뭔지, 어떻게 사용하는지</strong></p>
 <p><strong>프로토타입이 뭔지</strong></p>
+<ul>
+<li>프로토타입은 객체이고 상속을 받은 자식 객체에게</li>
+</ul>
 <p><strong>JS에서 프로미스는 어떻게 동작하는지</strong></p>
 <ul>
 <li>pending rejected fullfilled</li>
@@ -64,8 +70,90 @@
 <ul>
 <li>this 바인딩의 차이</li>
 <li>딥다이브 책에 나와있음</li>
+<li>arrow에서는 prototype 이 없다
+<ul>
+<li>args가 없다</li>
+<li>생성자 함수로 사용할 수 없다. (call말고 constructor)</li>
+</ul>
+</li>
 </ul>
 <p><strong>이벤트 루프에 대해서 설명을 해라</strong></p>
 <ul>
 <li>micro task queue와 일반 task queue와 다른점</li>
-</ul></section><hr/><footer><div class="bio"><div class="bio-social"><a href="https://github.com/dding-g" target="_blank"><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained"><div style="max-width:20px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;20&#x27; width=&#x27;20&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#080808;position:absolute;top:0;left:0;bottom:0;right:0"></div><picture><source type="image/webp" data-srcset="/static/aaa0dc8e18f491b91877ddaf41ab546d/fadb2/github.webp 5w,/static/aaa0dc8e18f491b91877ddaf41ab546d/bd5c1/github.webp 10w,/static/aaa0dc8e18f491b91877ddaf41ab546d/264f2/github.webp 20w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" href="ASD" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" data-src="/static/aaa0dc8e18f491b91877ddaf41ab546d/ca121/github.png" data-srcset="/static/aaa0dc8e18f491b91877ddaf41ab546d/549c4/github.png 5w,/static/aaa0dc8e18f491b91877ddaf41ab546d/ebf64/github.png 10w,/static/aaa0dc8e18f491b91877ddaf41ab546d/ca121/github.png 20w" alt="github"/></picture><noscript><picture><source type="image/webp" srcSet="/static/aaa0dc8e18f491b91877ddaf41ab546d/fadb2/github.webp 5w,/static/aaa0dc8e18f491b91877ddaf41ab546d/bd5c1/github.webp 10w,/static/aaa0dc8e18f491b91877ddaf41ab546d/264f2/github.webp 20w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" href="ASD" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" src="/static/aaa0dc8e18f491b91877ddaf41ab546d/ca121/github.png" srcSet="/static/aaa0dc8e18f491b91877ddaf41ab546d/549c4/github.png 5w,/static/aaa0dc8e18f491b91877ddaf41ab546d/ebf64/github.png 10w,/static/aaa0dc8e18f491b91877ddaf41ab546d/ca121/github.png 20w" alt="github"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div></a><a href="https://opaque-planarian-7f9.notion.site/About-dding-g-776f9cfa976147db9befff2dc15249ee" target="_blank"><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained"><div style="max-width:20px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;20&#x27; width=&#x27;20&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#f8f8f8;position:absolute;top:0;left:0;bottom:0;right:0"></div><picture><source type="image/webp" data-srcset="/static/7c71d08772cfef1f2f63a73151ec72b6/fadb2/notion_default.webp 5w,/static/7c71d08772cfef1f2f63a73151ec72b6/bd5c1/notion_default.webp 10w,/static/7c71d08772cfef1f2f63a73151ec72b6/264f2/notion_default.webp 20w,/static/7c71d08772cfef1f2f63a73151ec72b6/e73fe/notion_default.webp 40w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" data-src="/static/7c71d08772cfef1f2f63a73151ec72b6/ca121/notion_default.png" data-srcset="/static/7c71d08772cfef1f2f63a73151ec72b6/549c4/notion_default.png 5w,/static/7c71d08772cfef1f2f63a73151ec72b6/ebf64/notion_default.png 10w,/static/7c71d08772cfef1f2f63a73151ec72b6/ca121/notion_default.png 20w,/static/7c71d08772cfef1f2f63a73151ec72b6/f31ef/notion_default.png 40w" alt="github"/></picture><noscript><picture><source type="image/webp" srcSet="/static/7c71d08772cfef1f2f63a73151ec72b6/fadb2/notion_default.webp 5w,/static/7c71d08772cfef1f2f63a73151ec72b6/bd5c1/notion_default.webp 10w,/static/7c71d08772cfef1f2f63a73151ec72b6/264f2/notion_default.webp 20w,/static/7c71d08772cfef1f2f63a73151ec72b6/e73fe/notion_default.webp 40w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" src="/static/7c71d08772cfef1f2f63a73151ec72b6/ca121/notion_default.png" srcSet="/static/7c71d08772cfef1f2f63a73151ec72b6/549c4/notion_default.png 5w,/static/7c71d08772cfef1f2f63a73151ec72b6/ebf64/notion_default.png 10w,/static/7c71d08772cfef1f2f63a73151ec72b6/ca121/notion_default.png 20w,/static/7c71d08772cfef1f2f63a73151ec72b6/f31ef/notion_default.png 40w" alt="github"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div></a><a href="https://ddingg.tistory.com/" target="_blank"><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained"><div style="max-width:20px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;20&#x27; width=&#x27;20&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#080808;position:absolute;top:0;left:0;bottom:0;right:0"></div><picture><source type="image/webp" data-srcset="/static/db7b85c807ee7487bce0ef935ca9554a/fadb2/tistory-logo.webp 5w,/static/db7b85c807ee7487bce0ef935ca9554a/bd5c1/tistory-logo.webp 10w,/static/db7b85c807ee7487bce0ef935ca9554a/264f2/tistory-logo.webp 20w,/static/db7b85c807ee7487bce0ef935ca9554a/e73fe/tistory-logo.webp 40w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" data-src="/static/db7b85c807ee7487bce0ef935ca9554a/83df1/tistory-logo.svg" data-srcset="/static/db7b85c807ee7487bce0ef935ca9554a/35e25/tistory-logo.svg 5w,/static/db7b85c807ee7487bce0ef935ca9554a/d77ca/tistory-logo.svg 10w,/static/db7b85c807ee7487bce0ef935ca9554a/83df1/tistory-logo.svg 20w,/static/db7b85c807ee7487bce0ef935ca9554a/bfcab/tistory-logo.svg 40w" alt="tistory"/></picture><noscript><picture><source type="image/webp" srcSet="/static/db7b85c807ee7487bce0ef935ca9554a/fadb2/tistory-logo.webp 5w,/static/db7b85c807ee7487bce0ef935ca9554a/bd5c1/tistory-logo.webp 10w,/static/db7b85c807ee7487bce0ef935ca9554a/264f2/tistory-logo.webp 20w,/static/db7b85c807ee7487bce0ef935ca9554a/e73fe/tistory-logo.webp 40w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" src="/static/db7b85c807ee7487bce0ef935ca9554a/83df1/tistory-logo.svg" srcSet="/static/db7b85c807ee7487bce0ef935ca9554a/35e25/tistory-logo.svg 5w,/static/db7b85c807ee7487bce0ef935ca9554a/d77ca/tistory-logo.svg 10w,/static/db7b85c807ee7487bce0ef935ca9554a/83df1/tistory-logo.svg 20w,/static/db7b85c807ee7487bce0ef935ca9554a/bfcab/tistory-logo.svg 40w" alt="tistory"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div></a></div><div><p>조명근</p><small>area409@gmail.com <br/>웹 개발자, 프론트엔드</small></div></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/coding-test/코딩테스트 로드맵/">← <!-- -->코딩테스트 로드맵</a></li><li><a rel="next" href="/study-js/이벤트 루프는 무엇인가요/">이벤트 루프는 무엇인가요?<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2022<!-- -->, Built with<a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/study-cs/FE 면접 질문 연습/";window.___webpackCompilationHash="843c92df90a539b4ef23";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f171ab73a59f5384fe34.js"],"app":["/app-c879f8158db9e4859497.js"],"component---src-pages-404-js":["/component---src-pages-404-js-b74afbb8d90a5cfcbf0c.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a6453c5cc90b6f479b31.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-45b5b61180cf2955a274.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-7fb2973cfd88763f74d2.js"]};/*]]>*/</script><script src="/polyfill-f171ab73a59f5384fe34.js" nomodule=""></script><script src="/app-c879f8158db9e4859497.js" async=""></script><script src="/framework-fe55b12a0b47872d8b74.js" async=""></script><script src="/webpack-runtime-3179285ddae460ba800f.js" async=""></script></body></html>
+</ul>
+<hr>
+<p><strong>this가 바인딩 되는 세가지 경우</strong></p>
+<ul>
+<li>그냥 window가 바인딩</li>
+<li>생성자 함수(나중에 생성되는 인스턴스 객체)</li>
+<li>객체 안에서 this를 사용한 경우</li>
+</ul>
+<p><strong>var let const를 브라우저에서 선언했을떄</strong></p>
+<ul>
+<li>var는 전역, let const는 아님.</li>
+</ul>
+<p><strong>얕은 복사, 깊은 복사</strong></p>
+<ul>
+<li>JSON 형식 -> 다시 객체로 변경하기</li>
+<li>spread 연산자</li>
+<li>Array copy</li>
+<li>object안에 object는 어떻게 deepcopy?
+<ul>
+<li>재귀적으로 호출해서 type체크. object면 deepcopy</li>
+</ul>
+</li>
+</ul>
+<p><strong>call, apply, bind</strong></p>
+<ul>
+<li>공부</li>
+</ul>
+<p><strong>원시값에 붙어있는 함수는 어떻게 쓸 수 있는가?</strong></p>
+<ul>
+<li>Javascript엔진이 타입 체크해서 암묵적으로 원시값을 wrapping함</li>
+</ul>
+<p><strong>Scope란?</strong></p>
+<ul>
+<li>식별자의 유효범위. 공부.</li>
+<li>렉시컬 스코프란?
+<ul>
+<li>렉시컬 환경. 정적 스코프, 동적 스코프</li>
+</ul>
+</li>
+</ul>
+<p><strong>Property attribute</strong></p>
+<ul>
+<li>Object freeze, Object seal</li>
+<li>Prevent Extension</li>
+</ul>
+<hr>
+<p><strong>크로스 브라우징이 무엇인가요?</strong></p>
+<ul>
+<li>크로스 브라우징은 웹 표준에 따라 서로 다른 OS 또는 플랫폼에 대응하는 것을 말한다. 브라우저별 렌더링 엔진이 다른 상황 등 어떠한 상황 속에서도 문제 없이 동작하게 하는 것을 목표로 한다. 프론트엔드 개발자는 여러가지 전략을 세울 수가 있는데, feature detection(기능 탐지)을 사용해서 해당 기능이 해당 브라우저에 있는지를 확인하는 방법을 사용할 수도 있다. 특히 한 쪽 환경에 최적화를 하는 것 보다, 전체적인 웹 표준을 지키는 데에 노력해야 한다.</li>
+</ul>
+<p><strong>CORS가 무엇이며 어떻게 해결을 할 수 있는지 설명해 보세요.</strong></p>
+<ul>
+<li>다른 도메인에서 리소스 요청 시 cross-origin HTTP 에 의해 요청을 하는데, 대부분의 브라우저는 보안 상의 이유로 이 요청을 제한한다. 이를 동일 오리진 정책(Same Origin Policy)이라고 한다. 요청을 보내기 위해서는 요청 보내는 대상과 프로토콜이 같아야 하고, 포트도 같아야 한다. JSONP(JSON-padding)을 통해 해결하거나 특정 HTTP 헤더를 추가하여 이 이슈를 해결할 수 있다. 이와 같이 타 도메인 간 자원을 공유할 수 있게 해주는 것을 Cross Origin Resource Sharing, 줄여서 CORS라고 한다.</li>
+</ul>
+<p><strong>빈 화면에서 렌더링이 완료 되기까지 너무 오래 걸린다는 피드백이 있을 때, 어떻게 하면 이 문제를 해결할 수 있을까요?(단, 캐시는 이미 적용 됨)</strong></p>
+<ul>
+<li>script 파일을 body tag 가장 하단에 위치시키거나 script 태그에 async 속성을 부여한다. 또는 네트워크 리소스 블라킹을 통해 불필요한 무거운 파일들을 제한한다.</li>
+</ul>
+<p><strong>쿠키와 세션 스토리지, 로컬 스토리지의 차이를 설명해 주세요.</strong>
+기본적으로 쿠키와 로컬 스토리지, 세션 스토리지는 모두 브라우저에서 데이터 저장소의 역할을 하는 것들이다. 웹에서 로그인을 하기 위해서는 토큰을 발급받아 API를 호출해야 한다. 하지만 반복되는 작업을 계속 하게 되는 것이 비효율적이고, 이를 보완하기 위해 쿠키를 서버와 클라이언트에 생성해서 토큰 발급 없이 쿠키만 가지고 서버에 요청을 할 수 있게 된다. 쿠키는 저장 공간이 4KB로 작은 편인데 이러한 단점을 보완하여 만든 것이 웹 스토리지이다.</p>
+<p>웹 스토리지는 서버에 클라이언트 데이터를 저장하지 않는다. 웹 스토리지에는 로컬 스토리지와 세션 스토리지가 있는데 로컬 스토리지는 브라우저에 정보가 계속해서 남아있는 반면, 세션 스토리지는 해당 세션이 끝나면, 즉 브라우저가 닫히면 데이터가 사라진다. 웹 스토리지는 데스크탑 기준 5~10MB의 저장 공간을 가지고 있어서 쿠키에 비해 훨씬 저장공간이 크다는 장점이 있다. 웹 스토리지는 반면 HTML5부터 지원하기 때문에 이전 브라우저에서는 지원이 되지 않는다는 단점이 있다.</p>
+<p><strong>프로그레시브 렌더링(Progressive Rendering)이 무엇인가요?</strong>
+프로그레시브 렌더링은 컨텐츠를 가능한 빨리 표시하기 위해 성능을 향상시키는 기술이다. 인터넷 속도가 느리거나 불안정한 모바일 환경이 아직 많이 남아있기 때문에 이럴 때 유용하게 사용한다. 대표적으로 레이지 로딩이 있다. 이미지를 한 번에 로드하는 것이 아니라, 자바스크립트를 통해 사용자가 표시하려는 부분만 스크롤 시에 이미지를 로드하는 것이다.</p>
+<p><strong>HTML5 tag를 설명해 주세요.</strong>
+모든 HTML 문서는 <!DOCTYPE> 선언으로 시작한다. HTML5의 경우 <!DOCTYPE html> 이런 식으로 말이다. 이 선언은 태그는 아니지만 브라우저가 어떤 타입을 받아들여야 할지를 알려주는 정보이다.</p>
+<p>여러가지 태그가 있는데 주요한 것들 위주로 살펴보면, HTML5의 필수 태그는 html, head, body 등이 있다. html 태그는 HTML문서의 가장 최상단에 위치하는 태그이며, head 태그에는 style, script, title, link, meta 태그 등이 들어간다. body 태그는 HTML 문서의 내용이 들어간다.</p>
+<p>meta 태그에 대해서 조금 더 살펴보면, meta 태그는 head 부분에서 다른 태그들(script, style, link, title 등)로 나타낼 수 없는 메타데이터를 나타내는 태그를 의미한다. <meta name="keywords" content="ABC"> 와 같이 검색 엔진을 위한 키워드나 <meta name="description" content="OWEN">과 같이 문서에 대한 설명 등에 사용된다. 화면에는 별다르게 표시되는 내용이 없지만, 검색 엔진이나 브라우저에서 읽힌다.</p>
+<p><strong>Sementic tag에 대해서 설명해 주세요.</strong>
+시멘틱 태그는 HTML5에 도입이 되었는데, 개발자와 브라우저에게 의미있는 태그를 제공하는 것을 의미한다. 예를 들어 <div> 태그는 non-sementic 태그이고, <table>, <article>은 sementic 태그에 속한다. 시멘틱 태그는 태그만 보고 대략적으로 들어갈 내용을 유추할 수 있다는 장점이 있다. 헤더와 푸터를 설정할 때에도 과거에는 <div id="header"></div> 와 같이 했던 것을 이제는 <header> 하나로 깔끔하게 정리할 수 있다.</p>
+<p><strong>점진적 향상법(progressive enhancement)과 우아한 성능저하법(graceful degradation)의 차이를 설명하실 수 있습니까?</strong>
+점진적 향상법 : 구형 브라우저에 100, 신형 브라우저에 150 구현
+우아한 성능저하법 : 구형 브라우저에 50, 신형 브라우저에 100 구현</p>
+<p><strong>Flash of Unstyled Content에 관해 설명해주세요. 또 FOUC를 피하기 위해선 어떻게 해야 하나요?</strong></p>
+<ul>
+<li>css @import 피하기</li>
+<li>body안에서 script 사용할때 dom 수정하는 부분 주의</li>
+</ul></section><hr/><footer><div class="bio"><div class="bio-social"><a href="https://github.com/dding-g" target="_blank"><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained"><div style="max-width:20px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;20&#x27; width=&#x27;20&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#080808;position:absolute;top:0;left:0;bottom:0;right:0"></div><picture><source type="image/webp" data-srcset="/static/aaa0dc8e18f491b91877ddaf41ab546d/fadb2/github.webp 5w,/static/aaa0dc8e18f491b91877ddaf41ab546d/bd5c1/github.webp 10w,/static/aaa0dc8e18f491b91877ddaf41ab546d/264f2/github.webp 20w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" href="ASD" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" data-src="/static/aaa0dc8e18f491b91877ddaf41ab546d/ca121/github.png" data-srcset="/static/aaa0dc8e18f491b91877ddaf41ab546d/549c4/github.png 5w,/static/aaa0dc8e18f491b91877ddaf41ab546d/ebf64/github.png 10w,/static/aaa0dc8e18f491b91877ddaf41ab546d/ca121/github.png 20w" alt="github"/></picture><noscript><picture><source type="image/webp" srcSet="/static/aaa0dc8e18f491b91877ddaf41ab546d/fadb2/github.webp 5w,/static/aaa0dc8e18f491b91877ddaf41ab546d/bd5c1/github.webp 10w,/static/aaa0dc8e18f491b91877ddaf41ab546d/264f2/github.webp 20w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" href="ASD" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" src="/static/aaa0dc8e18f491b91877ddaf41ab546d/ca121/github.png" srcSet="/static/aaa0dc8e18f491b91877ddaf41ab546d/549c4/github.png 5w,/static/aaa0dc8e18f491b91877ddaf41ab546d/ebf64/github.png 10w,/static/aaa0dc8e18f491b91877ddaf41ab546d/ca121/github.png 20w" alt="github"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div></a><a href="https://opaque-planarian-7f9.notion.site/About-dding-g-776f9cfa976147db9befff2dc15249ee" target="_blank"><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained"><div style="max-width:20px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;20&#x27; width=&#x27;20&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#f8f8f8;position:absolute;top:0;left:0;bottom:0;right:0"></div><picture><source type="image/webp" data-srcset="/static/7c71d08772cfef1f2f63a73151ec72b6/fadb2/notion_default.webp 5w,/static/7c71d08772cfef1f2f63a73151ec72b6/bd5c1/notion_default.webp 10w,/static/7c71d08772cfef1f2f63a73151ec72b6/264f2/notion_default.webp 20w,/static/7c71d08772cfef1f2f63a73151ec72b6/e73fe/notion_default.webp 40w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" data-src="/static/7c71d08772cfef1f2f63a73151ec72b6/ca121/notion_default.png" data-srcset="/static/7c71d08772cfef1f2f63a73151ec72b6/549c4/notion_default.png 5w,/static/7c71d08772cfef1f2f63a73151ec72b6/ebf64/notion_default.png 10w,/static/7c71d08772cfef1f2f63a73151ec72b6/ca121/notion_default.png 20w,/static/7c71d08772cfef1f2f63a73151ec72b6/f31ef/notion_default.png 40w" alt="github"/></picture><noscript><picture><source type="image/webp" srcSet="/static/7c71d08772cfef1f2f63a73151ec72b6/fadb2/notion_default.webp 5w,/static/7c71d08772cfef1f2f63a73151ec72b6/bd5c1/notion_default.webp 10w,/static/7c71d08772cfef1f2f63a73151ec72b6/264f2/notion_default.webp 20w,/static/7c71d08772cfef1f2f63a73151ec72b6/e73fe/notion_default.webp 40w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" src="/static/7c71d08772cfef1f2f63a73151ec72b6/ca121/notion_default.png" srcSet="/static/7c71d08772cfef1f2f63a73151ec72b6/549c4/notion_default.png 5w,/static/7c71d08772cfef1f2f63a73151ec72b6/ebf64/notion_default.png 10w,/static/7c71d08772cfef1f2f63a73151ec72b6/ca121/notion_default.png 20w,/static/7c71d08772cfef1f2f63a73151ec72b6/f31ef/notion_default.png 40w" alt="github"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div></a><a href="https://ddingg.tistory.com/" target="_blank"><div data-gatsby-image-wrapper="" class="gatsby-image-wrapper gatsby-image-wrapper-constrained"><div style="max-width:20px;display:block"><img alt="" role="presentation" aria-hidden="true" src="data:image/svg+xml;charset=utf-8,%3Csvg height=&#x27;20&#x27; width=&#x27;20&#x27; xmlns=&#x27;http://www.w3.org/2000/svg&#x27; version=&#x27;1.1&#x27;%3E%3C/svg%3E" style="max-width:100%;display:block;position:static"/></div><div aria-hidden="true" data-placeholder-image="" style="opacity:1;transition:opacity 500ms linear;background-color:#080808;position:absolute;top:0;left:0;bottom:0;right:0"></div><picture><source type="image/webp" data-srcset="/static/db7b85c807ee7487bce0ef935ca9554a/fadb2/tistory-logo.webp 5w,/static/db7b85c807ee7487bce0ef935ca9554a/bd5c1/tistory-logo.webp 10w,/static/db7b85c807ee7487bce0ef935ca9554a/264f2/tistory-logo.webp 20w,/static/db7b85c807ee7487bce0ef935ca9554a/e73fe/tistory-logo.webp 40w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" data-src="/static/db7b85c807ee7487bce0ef935ca9554a/83df1/tistory-logo.svg" data-srcset="/static/db7b85c807ee7487bce0ef935ca9554a/35e25/tistory-logo.svg 5w,/static/db7b85c807ee7487bce0ef935ca9554a/d77ca/tistory-logo.svg 10w,/static/db7b85c807ee7487bce0ef935ca9554a/83df1/tistory-logo.svg 20w,/static/db7b85c807ee7487bce0ef935ca9554a/bfcab/tistory-logo.svg 40w" alt="tistory"/></picture><noscript><picture><source type="image/webp" srcSet="/static/db7b85c807ee7487bce0ef935ca9554a/fadb2/tistory-logo.webp 5w,/static/db7b85c807ee7487bce0ef935ca9554a/bd5c1/tistory-logo.webp 10w,/static/db7b85c807ee7487bce0ef935ca9554a/264f2/tistory-logo.webp 20w,/static/db7b85c807ee7487bce0ef935ca9554a/e73fe/tistory-logo.webp 40w" sizes="(min-width: 20px) 20px, 100vw"/><img data-gatsby-image-ssr="" data-main-image="" style="opacity:0" sizes="(min-width: 20px) 20px, 100vw" decoding="async" loading="lazy" src="/static/db7b85c807ee7487bce0ef935ca9554a/83df1/tistory-logo.svg" srcSet="/static/db7b85c807ee7487bce0ef935ca9554a/35e25/tistory-logo.svg 5w,/static/db7b85c807ee7487bce0ef935ca9554a/d77ca/tistory-logo.svg 10w,/static/db7b85c807ee7487bce0ef935ca9554a/83df1/tistory-logo.svg 20w,/static/db7b85c807ee7487bce0ef935ca9554a/bfcab/tistory-logo.svg 40w" alt="tistory"/></picture></noscript><script type="module">const t="undefined"!=typeof HTMLImageElement&&"loading"in HTMLImageElement.prototype;if(t){const t=document.querySelectorAll("img[data-main-image]");for(let e of t){e.dataset.src&&(e.setAttribute("src",e.dataset.src),e.removeAttribute("data-src")),e.dataset.srcset&&(e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset"));const t=e.parentNode.querySelectorAll("source[data-srcset]");for(let e of t)e.setAttribute("srcset",e.dataset.srcset),e.removeAttribute("data-srcset");e.complete&&(e.style.opacity=1,e.parentNode.parentNode.querySelector("[data-placeholder-image]").style.opacity=0)}}</script></div></a></div><div><p>조명근</p><small>area409@gmail.com <br/>웹 개발자, 프론트엔드</small></div></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/coding-test/코딩테스트 로드맵/">← <!-- -->코딩테스트 로드맵</a></li><li><a rel="next" href="/study-js/이벤트 루프는 무엇인가요/">이벤트 루프는 무엇인가요?<!-- --> →</a></li></ul></nav></main><footer>© <!-- -->2022<!-- -->, Built with<a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/study-cs/FE 면접 질문 연습/";window.___webpackCompilationHash="5d7fe02f5441bab3127e";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-f171ab73a59f5384fe34.js"],"app":["/app-c879f8158db9e4859497.js"],"component---src-pages-404-js":["/component---src-pages-404-js-b74afbb8d90a5cfcbf0c.js"],"component---src-pages-index-js":["/component---src-pages-index-js-a6453c5cc90b6f479b31.js"],"component---src-pages-using-typescript-tsx":["/component---src-pages-using-typescript-tsx-45b5b61180cf2955a274.js"],"component---src-templates-blog-post-js":["/component---src-templates-blog-post-js-7fb2973cfd88763f74d2.js"]};/*]]>*/</script><script src="/polyfill-f171ab73a59f5384fe34.js" nomodule=""></script><script src="/app-c879f8158db9e4859497.js" async=""></script><script src="/framework-fe55b12a0b47872d8b74.js" async=""></script><script src="/webpack-runtime-3179285ddae460ba800f.js" async=""></script></body></html>
