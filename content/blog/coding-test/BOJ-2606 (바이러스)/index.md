@@ -1,5 +1,5 @@
 ---
-title: "[BOJ]2606 바이러스"
+title: "BOJ-2606 (바이러스)"
 date: "2022-07-12T17:12:03.284Z"
 description: "[문제링크](https://www.acmicpc.net/problem/2606)"
 tags:
