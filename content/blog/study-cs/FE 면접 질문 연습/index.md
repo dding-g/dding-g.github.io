@@ -122,8 +122,8 @@ tags:
 
 **Property attribute**
 
-- Object freeze, Object seal
-- Prevent Extension
+- Object freeze, Object seal, Object preventExtensions
+- readOnly, edit 가능. 속성값 추가/삭제 불가, 확장만 불가.
 
 ---
 
@@ -165,3 +165,53 @@ meta 태그에 대해서 조금 더 살펴보면, meta 태그는 head 부분에�
 
 - css @import 피하기
 - body안에서 script 사용할때 dom 수정하는 부분 주의
+
+---
+
+0729
+
+**<script>, <script async>와 <script defer>의 차이점에 관해 설명해주세요.**
+
+- body 하단에 script 를 실행시키는 이유와 관련.
+- async defer 모두 백그라운드에서 script 동작.
+- async -> GA같은 곳에서 사용함.
+
+**다음 코드가 즉시 호출 함수 표현식(IIFE)로 동작하지 않는 이유에 관해서 설명해보세요: function foo(){ }();. IIFE로 만들기 위해서는 어떻게 해야 하나요?**
+
+이벤트 버블링(Event Bubbling)에 대해서 설명하세요.
+
+- preventDefault, stopPropagation
+
+SPA에서 SEO에 유리하도록 만들기 위한 방법에 대해 설명해주세요.
+
+- SSR, Pre-rendering
+
+이벤트 캡쳐링(Event Capturing)에 대해서 설명하세요.
+
+: React에서 state를 왜 immutable하게 관리하는가?
+
+- immutable하게 관리하지 않으면 객체 전체를 rerendering
+
+: wrapper객체와 원시값
+
+: this는 무엇인가?
+
+- 일반 함수, 생성자 함수, 객체 메서드, addEventListener 안에서 각각 this가 바인딩 되는게 다름.
+
+---
+
+- babel 역할
+- webpack 역할
+  - 트리쉐이킹이 무엇이고 어떻게 동작하는가?
+- jquery와 react의 차이점.
+- v-dom 을 왜 사용하는가?
+  - dom을 직접 수정하는 것보다 뭐가 더 좋은가? -> 한줄한줄 수정할 때 마다 re-rendering 되는데 v-dom은 한번에 수정해서 성능상 이점이 있다.
+- position relative, absolute 의 속도 차이를
+  - releative : layout 과정 후 [normal flow](https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)를 거쳐서 포지셔닝을 거친다.
+    - releative 안에서 reflow가 일어나면 문서 전체가 리렌더 되는거나 마찬가지. height, width 수정 되면 형제, 부모 모두 수정 되어하기 때문
+  - absolute : normal flow 과정을 거치지 않고 바로 포지셔닝을 거친다.
+- CSR vs SSR
+  - SEO에 노출되는 첫 페이지만 SSR로. 나머지는 CSR 페이지로 빌드
+  - 열악한 글로벌 환경을 고려하면 CSR도 고려해볼만함.
+
+다음주 월요일(8/1)은 Javascript 문제 5개 받고 CSS 5개 물어보기.
