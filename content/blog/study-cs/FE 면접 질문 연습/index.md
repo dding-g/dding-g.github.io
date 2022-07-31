@@ -47,7 +47,8 @@ tags:
 ## ETC
 
 **자기소개**
-기술 스택, 전 회사 경력.
+
+- 기술 스택, 전 회사 경력.
 
 **debounce 쓰로틀링을 설명하고 두개의 차이를 설명하라**
 
@@ -170,36 +171,18 @@ meta 태그에 대해서 조금 더 살펴보면, meta 태그는 head 부분에�
 
 0729
 
-**<script>, <script async>와 <script defer>의 차이점에 관해 설명해주세요.**
-
-- body 하단에 script 를 실행시키는 이유와 관련.
-- async defer 모두 백그라운드에서 script 동작.
-- async -> GA같은 곳에서 사용함.
-
 **다음 코드가 즉시 호출 함수 표현식(IIFE)로 동작하지 않는 이유에 관해서 설명해보세요: function foo(){ }();. IIFE로 만들기 위해서는 어떻게 해야 하나요?**
-
-이벤트 버블링(Event Bubbling)에 대해서 설명하세요.
-
-- preventDefault, stopPropagation
-
-SPA에서 SEO에 유리하도록 만들기 위한 방법에 대해 설명해주세요.
-
-- SSR, Pre-rendering
-
-이벤트 캡쳐링(Event Capturing)에 대해서 설명하세요.
-
-: React에서 state를 왜 immutable하게 관리하는가?
-
-- immutable하게 관리하지 않으면 객체 전체를 rerendering
-
-: wrapper객체와 원시값
-
-: this는 무엇인가?
-
-- 일반 함수, 생성자 함수, 객체 메서드, addEventListener 안에서 각각 this가 바인딩 되는게 다름.
 
 ---
 
+다음주 월요일(8/1)은 Javascript 문제 5개 받고 CSS 5개 물어보기.
+
+---
+
+0731 정리 목록
+
+- 프로토타입이 뭔지
+- 클로저 뭔지, 어떻게 사용하는지
 - babel 역할
 - webpack 역할
   - 트리쉐이킹이 무엇이고 어떻게 동작하는가?
@@ -213,5 +196,18 @@ SPA에서 SEO에 유리하도록 만들기 위한 방법에 대해 설명해주�
 - CSR vs SSR
   - SEO에 노출되는 첫 페이지만 SSR로. 나머지는 CSR 페이지로 빌드
   - 열악한 글로벌 환경을 고려하면 CSR도 고려해볼만함.
-
-다음주 월요일(8/1)은 Javascript 문제 5개 받고 CSS 5개 물어보기.
+- <script>, <script async>와 <script defer>의 차이점에 관해 설명해주세요.
+- body 하단에 script 를 실행시키는 이유와 관련.
+- async defer 모두 백그라운드에서 script 동작.
+- async -> GA같은 곳에서 사용함.
+- 이벤트 버블링(Event Bubbling)에 대해서 설명하세요.
+  - preventDefault, stopPropagation
+- SPA에서 SEO에 유리하도록 만들기 위한 방법에 대해 설명해주세요.
+  - SSR, Pre-rendering
+- 이벤트 캡쳐링(Event Capturing)에 대해서 설명하세요.
+- React에서 state를 왜 immutable하게 관리하는가?
+  - immutable하게 관리하지 않으면 객체 전체를 rerendering
+- wrapper객체와 원시값
+- this는 무엇인가?
+  - 일반 함수, 생성자 함수, 객체 메서드, addEventListener 안에서 각각 this가 바인딩 되는게 다름.
+- 동등(===),일치(==) 연산자의 피연산자를 함수로 사용했을때 어떻게 비교하나요?
