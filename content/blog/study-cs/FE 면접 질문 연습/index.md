@@ -11,6 +11,7 @@ tags:
 
 - https://realmojo.tistory.com/300
 - https://xiubindev.tistory.com/119
+- https://h5bp.org/Front-end-Developer-Interview-Questions/translations/korean/
 
 ## CS
 
@@ -28,9 +29,17 @@ tags:
 
 [**클로저는 무엇인가요? 원리와 왜 사용하는지 설명해주세요.**](../../study-js/클로저가%20무엇인가요/index.md)
 
-[**이벤트 루프는 무엇인가요?**](../../study-js/이벤트%20루프는%20무엇인가요?/index.md)
+[**이벤트 루프는 무엇인가요?**](../../study-js/이벤트%20루프는%20무엇인가요/index.md)
 
-**cjs esm의 차이, 왜 Typescript에서는 cjs를 사용하지 않을까?**
+[**프로토타입이 무엇인가요?**](<../../study-js/프로토타입(prototype)이%20무엇인가요/index.md>)
+
+[**실행 컨텍스트가 무엇인가요?**](../../study-js/실행%20컨텍스트가%20무엇인가요/index.md)
+
+[**babel이 무엇인가요?**](../../study-js/babel이%20무엇인가요/index.md)
+
+[**polyfill이 무엇인가요?**](<../../study-js/폴리필(polyfill)이%20무엇인가요/index.md>)
+
+[**webpack이 무엇인가요?**](../../study-js/webpack이%20무엇인가요/index.md)
 
 ## React
 
@@ -66,10 +75,6 @@ tags:
       - 오버로딩은 Javascript에서 지원하지 않는다. args 객체를 이용해서 구현할 수 있을 것 같음.
 
 **클로저 뭔지, 어떻게 사용하는지**
-
-**프로토타입이 뭔지**
-
-- 프로토타입은 객체이고 상속을 받은 자식 객체에게
 
 **JS에서 프로미스는 어떻게 동작하는지**
 
@@ -181,22 +186,16 @@ meta 태그에 대해서 조금 더 살펴보면, meta 태그는 head 부분에�
 
 0731 정리 목록
 
-- 프로토타입이 뭔지
-- 클로저 뭔지, 어떻게 사용하는지
-- babel 역할
-- webpack 역할
-  - 트리쉐이킹이 무엇이고 어떻게 동작하는가?
-- jquery와 react의 차이점.
-- v-dom 을 왜 사용하는가?
-  - dom을 직접 수정하는 것보다 뭐가 더 좋은가? -> 한줄한줄 수정할 때 마다 re-rendering 되는데 v-dom은 한번에 수정해서 성능상 이점이 있다.
+- eval 함수는 무엇인가요
 - position relative, absolute 의 속도 차이를
   - releative : layout 과정 후 [normal flow](https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Normal_Flow)를 거쳐서 포지셔닝을 거친다.
     - releative 안에서 reflow가 일어나면 문서 전체가 리렌더 되는거나 마찬가지. height, width 수정 되면 형제, 부모 모두 수정 되어하기 때문
   - absolute : normal flow 과정을 거치지 않고 바로 포지셔닝을 거친다.
+  - absolute -> 부모중 position 이 default 가 아닌걸 기준.
 - CSR vs SSR
   - SEO에 노출되는 첫 페이지만 SSR로. 나머지는 CSR 페이지로 빌드
   - 열악한 글로벌 환경을 고려하면 CSR도 고려해볼만함.
-- <script>, <script async>와 <script defer>의 차이점에 관해 설명해주세요.
+- `<script>, <script async>와 <script defer>`의 차이점에 관해 설명해주세요.
 - body 하단에 script 를 실행시키는 이유와 관련.
 - async defer 모두 백그라운드에서 script 동작.
 - async -> GA같은 곳에서 사용함.
@@ -211,3 +210,94 @@ meta 태그에 대해서 조금 더 살펴보면, meta 태그는 head 부분에�
 - this는 무엇인가?
   - 일반 함수, 생성자 함수, 객체 메서드, addEventListener 안에서 각각 this가 바인딩 되는게 다름.
 - 동등(===),일치(==) 연산자의 피연산자를 함수로 사용했을때 어떻게 비교하나요?
+
+- 궁금한거
+  - vac 패턴, atomic 패턴이 무엇인가요?
+  - blob 패턴이 무엇인가요?
+- function과 class의 차이
+
+---
+
+- 개발하면서 무엇에 스트레스를 받나요?
+- UTF-8, 유니코드, UTF-16 이 무엇인가요?
+- HTTP1.1, HTTP2 차이
+- HTTPS 암호화 방식
+- OAuth 2.0
+- TCP/IP 3 way handshake
+- HTTP Status code간 비슷한것들 차이
+- HTTP Method 설명
+- 알고리즘 시간 복잡도
+- ES6, V8 엔진 동작 원리
+- OSI 7계층 (데이터 전달 과정)
+
+---
+
+- event delegation
+  - 특정 Element만을 위해 이벤트를 등록하지 않고 dataset등을 활용하여 하나의 handler에 `event.target` 을 받아 해당 데이터로 이벤트를 구분하여 범용적으로 사용할 수 있도록 하는 패턴
+  - [링크](https://ko.javascript.info/event-delegation)
+- javascript에서 this가 동작하는 원리
+  [this의 동적 바인딩?](https://cocoder16.tistory.com/45)
+
+  - 전역 : `this`는 strict 모드와 상관없이 전역 객체를 참조함
+    - 현재 실행중인 컨텍스트와 관계 없이 동작하려면 `globalThis` 사용.
+  - 함수
+    - 단순 호출 : 전역 환경에서는 전역 객체(`window`) 호출.
+    - 화살표 함수 : 상위 스코프를 가르킴. 전역 환경에서는 전역 객체 호출.
+    - 생성자
+      - `new` 키워드로 함수를 만들면 새로 생긴 객체를 지칭한다.
+    - 객체내부의 함수
+      - 객체 자신을 가르킨다.
+      - 단, 함수가 호출될 때 동적 바인딩 된다
+  - `addEventListener` 에서
+
+    - 이벤트를 발생시킨 Element를 지칭
+    - ```js
+      // 처리기로 호출하면 관련 객체를 파랗게 만듦
+      function bluify(e) {
+        // 언제나 true
+        console.log(this === e.currentTarget)
+        // currentTarget과 target이 같은 객체면 true
+        console.log(this === e.target)
+        this.style.backgroundColor = "#A5D9F3"
+      }
+
+      // 문서 내 모든 요소의 목록
+      var elements = document.getElementsByTagName("*")
+
+      // 어떤 요소를 클릭하면 파랗게 변하도록
+      // bluify를 클릭 처리기로 등록
+      for (var i = 0; i < elements.length; i++) {
+        elements[i].addEventListener("click", bluify, false)
+      }
+      ```
+
+  - 인라인 이벤트
+    - `<button onclick="alert(this.tagName.toLowerCase());"> this : 자기 자신(button) </button> `
+    - `<button onclick="alert((function() { return this; })());"> this : 전역 window </button>`
+
+- event 버블링, 캡쳐링
+
+  - 이벤트가 퍼질때 밑으로 내려가면서 이벤트를 발생시키는걸 캡쳐링, 올라오는걸 버블링 이라고 함.
+
+---
+
+- lazy 로딩이 동작하는 방식
+
+  - React.lazy 를 사용하면?
+  - webpack에서 번들해줄떄 포함하지 않고 번들함. 필요할때 받는 방식.
+
+- DOMContentLoaded evnet
+  - DOM 구성이 완료되면 불림
+  - defer는 해당 이벤트 이전에 불림
+- loaded event
+
+  - 외부 리소스 까지 모두 다운로드가 완료 되면 불림.
+  - async는 그냥 스크립트 다운로드가 완료되면 실행되기 때문에 노상관
+
+- translate animation
+- z-index
+- CSS에서 'C’는 Cascading을 의미합니다. Cascading에 관해서 설명해주세요. 또 cascading system의 장점은 무엇인가요?
+  - "우선순위"에 따라.
+- inline과 inline-block의 차이점은 무엇인가요?
+- CSS Selector가 어떠한 원리로 동작하는지 설명해주세요.
+  - 효율성

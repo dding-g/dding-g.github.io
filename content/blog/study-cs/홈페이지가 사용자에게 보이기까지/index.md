@@ -102,6 +102,26 @@ DOM 트리가 구축되는 동안 브라우저는 렌더 트리를 구축한다.
 렌더러가 생성되어 트리에 추가될 때 크기와 위치 정보는 없는데 이렇게 뷰 포트 내에서 요소들의 정확한 위치와 크기를 계산하는 과정을 배치 또는 리플로라고 부른다.
 HTML은 흐름 기반의 배치모델을 사용하므로 왼쪽에서 오른쪽, 위에서 아래로 흐르는 방향으로 요소가 배치된다.
 
+reflow가 불필요하게 일어나게 되면 심각한 성능 문제를 야기할 수 있다.
+자식, 부모, 조상등 관련된 모든 요소들이 layouto 배치부터 다시 계산해야 하기 때문이다.
+reflow를 야기하는 요소는 아래와 같은데 자세한 이벤트는
+
+- [what-force-layout](https://gist.github.com/paulirish/5d52fb081b3570c81e3a)
+- [[성능] Reflow 원인과 마크업 최적화 Tip](https://daumui.tistory.com/12)
+
+를 참조하자.
+
+> - 윈도우 리사이징 (뷰포트 변화는 Global Layout에 영향)
+> - 폰트의 변화 (height계산에 영향을 주므로 Global Layout에 영향)
+> - 스타일 추가 또는 제거
+> - 내용 변화 (인풋박스에 텍스트 입력 등..)
+> - :hover와 같은 CSS Pseudo Class
+> - (CSS: The Definitive Guide: The Definitive Guide 55p에서, hover할 시 나타나는 변화로 인한 우려가 생긴다는 의미인 듯 합니다.)
+> - 클래스 Attribute의 동적 변화
+> - JS를 통한 DOM 동적 변화
+> - 엘리먼트에 대한 offsetWidth / offsetHeight (화면에서 보여지는 좌표) 계산시
+> - 스타일 Attribute 동적변화
+
 **더치 비트 체제**
 소소한 변경 때문에 전체를 다시 배치하지 않기 위해 브라우저는 "더티 비트" 체제르 사용한다.
 

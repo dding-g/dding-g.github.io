@@ -47,6 +47,12 @@ CJS에서 `dynamic import` 로 파일을 불러오거나 `ESM`프로젝트로 �
 - [CommonJS와 ES Modules은 왜 함께 할 수 없는가?](https://yceffort.kr/2020/08/commonjs-esmodules)
   - 변역글인데, 이 글에서는 CJS가 향후 Javascript의 미래가 될 거라 판단했다.
 
+### AMD(Asynchronous Module Definition)
+
+브라우저단에서 사용하는 비동기 모듈 시스템.
+과거 CommonJS는 동기적인 모듈 시스템을 추구했다면 AMD는 브라우저에서 사용되기 위한 비동기로 동작하는 모듈 시스템을 고민했다.
+브라우저에서는 동기적으로 모듈을 다운받게 되면 모듈이 모두 다운로드 받아질 때 까지 기다려야 하기 때문에 비동기 모듈 시스템이 필요했는데, 안타깝게 표준이 되지는 못했다.
+
 ### CommonJS
 
 Javascript에 모듈화를 도입했던 선두주자.
@@ -64,3 +70,33 @@ ES Modules은 Javascript의 표준이 되었다.
 ESM과 CJS를 두고 벌이는 논쟁은 정말 많다. Pure ESM의 댓글만 봐도 수많은 의견들을 주고받는걸 볼 수 있다.
 하지만 Pure ESM에 대한 방향성도 그렇고 CommonJS 보다 ESM으로 흘러가는 것 같다.
 ESM은 CJS를 수용할 수 있으나 CJS는 ESM을 수용하기 까다롭기 때문이다.
+
+### UMD
+
+과거 AMD, CommonJS 가 서로 쓰이던 때에, 문제는 두가지 모듈 시스템을 사용한다는 것이였다.
+따라서 CommonJS와 AMD가 공통되는 방식으로 동작하면 편리할거라 느끼고 두가지 모듈 시스템중 어떤걸 사용해도 문제가 없도록 UMD가 등장했다.
+모듈 시스템이라기 보다는 디자인 패턴에 가깝다.
+
+_**이해를 돕기위해 [ZeroCho - AMD, CommonJS, UMD 모듈](https://www.zerocho.com/category/JavaScript/post/5b67e7847bbbd3001b43fd73)의 UMD 코드를 가져왔습니다.**_
+
+```js
+(function (root, factory) {
+  if (typeof define === 'function' && define.amd) { // AMD
+    define(['jquery', 'zerocho'], factory);
+  } else if (typeof module === 'object' && module.exports) { // CommonJS
+    module.exports = factory(require('jquery'), require('zerocho'));
+  } else { // window
+    root.myModule = factory(root.$, root.Z);
+  }
+}(this, function($, Z) {
+  return {
+    a: $,
+    b: Z,
+  };
+});
+```
+
+## 참고
+
+- [[JavaScript] CJS, AMD, UMD, ESM](https://beomy.github.io/tech/javascript/cjs-amd-umd-esm/)
+- [ZeroCho - AMD, CommonJS, UMD 모듈](https://www.zerocho.com/category/JavaScript/post/5b67e7847bbbd3001b43fd73)
