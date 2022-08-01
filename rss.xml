@@ -1,4 +1,351 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[TIL]]></description><link>https://dding-g.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 28 Jul 2022 16:06:09 GMT</lastBuildDate><item><title><![CDATA[BOJ-13549 (숨바꼭질3)]]></title><description><![CDATA[포인트 왜 아래는 되고 아래는 안되는지 모르겠다.]]></description><link>https://dding-g.github.io/coding-test/BOJ-13549 (숨바꼭질3)/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-13549 (숨바꼭질3)/</guid><pubDate>Thu, 28 Jul 2022 14:53:59 GMT</pubDate><content:encoded>&lt;h2&gt;포인트&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[TIL]]></description><link>https://dding-g.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 01 Aug 2022 13:56:47 GMT</lastBuildDate><item><title><![CDATA[Virtual DOM을 왜 사용하나요?]]></title><description><![CDATA[정의 
+ 직접 DOM에 접근하는건 왜 위험한가? 참고 DOM과 Virtual Dom이란?]]></description><link>https://dding-g.github.io/study-js/Virtual DOM을 왜 사용하나요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/Virtual DOM을 왜 사용하나요/</guid><pubDate>Mon, 01 Aug 2022 10:37:19 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;DOM : Document Object Model. HTML을 트리 구조로 파싱하여 Javascript에서 접근 가능하도록 Object 형식으로 나타낸 것&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;Virtual DOM : 가상 Document Object Model&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;직접 DOM에 접근하는건 왜 위험한가?&lt;/p&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.howdy-mj.me/dom/what-is-dom/&quot;&gt;DOM과 Virtual Dom이란?&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[jQuery와 React의 차이점은 무엇인가요?]]></title><description><![CDATA[참고 번역 : 프로젝트에서 jQuery 의 사용을 그만두겠다고 결심한 이유 educative.io - jQquery vs React jQuery는 뭐가 좋고 뭐가 안좋은가?  라는 슬로건을 가지고 있음.
+코드는 짧고 간결하게 쓰고 더 많은 action…]]></description><link>https://dding-g.github.io/study-js/jQuery와 React의 차이점은 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/jQuery와 React의 차이점은 무엇인가요/</guid><pubDate>Mon, 01 Aug 2022 08:24:25 GMT</pubDate><content:encoded>&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://medium.com/%EC%98%A4%EB%8A%98%EC%9D%98-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90%EC%84%9C-jquery-%EC%9D%98-%EC%82%AC%EC%9A%A9%EC%9D%84-%EA%B7%B8%EB%A7%8C%EB%91%90%EA%B2%A0%EB%8B%A4%EA%B3%A0-%EA%B2%B0%EC%8B%AC%ED%95%9C-%EC%9D%B4%EC%9C%A0-45379cba95b6&quot;&gt;번역 : 프로젝트에서 jQuery 의 사용을 그만두겠다고 결심한 이유&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.educative.io/answers/jquery-vs-react&quot;&gt;educative.io - jQquery vs React&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;jQuery는 뭐가 좋고 뭐가 안좋은가?&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;적게 작성하고, 더 많이&lt;/code&gt; 라는 슬로건을 가지고 있음.
+코드는 짧고 간결하게 쓰고 더 많은 action을 취할 수 있게 하자는 뜻 인듯.&lt;/p&gt;
+&lt;p&gt;세팅이 간단함.
+성능 이슈가 있음.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;직접 DOM을 조작하는 방식은 위험함. reflow 이벤트가 발행하면 자식, 부모, 조상요소 모두 다시 레이아웃을 계산하기 때문.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;명령형 프로그래밍&lt;/p&gt;
+&lt;h2&gt;React는 뭐가 좋고 뭐가 안좋은가?&lt;/h2&gt;
+&lt;p&gt;재사용이 가능한 코드
+Virtual DOM을 사용하기 때문에 jQuery처럼 하나씩 DOM에 접근해서 re-rendering을 시키는 것 보다 변경된 데이터를 한번에 바꾸기 때문에 더 빠름.
+데이터 중심&lt;/p&gt;
+&lt;p&gt;선언적 프로그래밍&lt;/p&gt;</content:encoded></item><item><title><![CDATA[webpack이 무엇인가요?]]></title><description><![CDATA[정의 Webpack Document 첫줄에 이렇게 안내하고있다. 은 Javascript 애플리케이션을 위한 정적 모듈 번들러 이다.  Javascript는 ES6, CJS…]]></description><link>https://dding-g.github.io/study-js/webpack이 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/webpack이 무엇인가요/</guid><pubDate>Mon, 01 Aug 2022 06:50:42 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://webpack.kr/concepts/&quot;&gt;Webpack Document&lt;/a&gt; 첫줄에 이렇게 안내하고있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;webpack&lt;/code&gt;은 Javascript 애플리케이션을 위한 &lt;strong&gt;정적 모듈 번들러&lt;/strong&gt; 이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;모듈&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Javascript는 ES6, CJS와 같은 &lt;a href=&quot;../Javascript%EC%97%90%EC%84%9C%EC%9D%98%20%EB%AA%A8%EB%93%88%20%EC%8B%9C%EC%8A%A4%ED%85%9C/index.md&quot;&gt;모듈 시스템&lt;/a&gt;이 존재하는데, 핵심은 &lt;code class=&quot;language-text&quot;&gt;코드의 스코프를 나눠 파일 단위로 관리한다.&lt;/code&gt; 이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;번들러&lt;/code&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“번들” 이라는 것은 무엇을 하나로 묶는 작업이다. &lt;code class=&quot;language-text&quot;&gt;XXX 번들러&lt;/code&gt; 라고 한다면 &lt;code class=&quot;language-text&quot;&gt;XXX&lt;/code&gt; 를 하나로 묶는 도구를 말한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;따라서 &lt;code class=&quot;language-text&quot;&gt;Webpack&lt;/code&gt;을 풀어쓰면&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;파일 단위로 나뉜 Javascript 코드를 하나의 파일로 묶는 도구&lt;/strong&gt; 라고 할 수 있다.&lt;/p&gt;
+&lt;p&gt;여기엔 Javascript 파일 뿐만 아니라 CSS, Image, HTML 파일도 포함이다.&lt;/p&gt;
+&lt;p&gt;과거 Single Page Application 아닌 여러 HTML 파일로 이루어진 페이지 에서는 각 페이지별로 로드되는 Javascript 파일이나 CSS 파일이 달랐다.&lt;/p&gt;
+&lt;p&gt;하지만 SPA로 넘어오면서 하나의 페이지를 동적으로 관리하다보니 Javascript 전체를 로드해야 하는 상황이 생겼고 파일이 많아지면 많아질수록 한정된 네트워크 자원에서 쾌적하게 사용하기는 힘들었다.&lt;/p&gt;
+&lt;p&gt;이런 단점을 보완하기 위해 최소화된 파일 개수, 파일 크기를 만들어야 했고 트리쉐이킹 등 파일 사이즈를 줄이는 작업과 함께 &lt;code class=&quot;language-text&quot;&gt;번들러&lt;/code&gt; 라는 개념이 등장했다.&lt;/p&gt;
+&lt;p&gt;여기서는 Webpack을 다루지만 &lt;code class=&quot;language-text&quot;&gt;rollup&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;parcel&lt;/code&gt; 등 수많은 Javascript 번들러가 존재한다.&lt;/p&gt;
+&lt;h2&gt;동작 방식&lt;/h2&gt;
+&lt;p&gt;Webpack은 내부적으로 &lt;code class=&quot;language-text&quot;&gt;Entry Point(시작점)&lt;/code&gt; 부터 &lt;a href=&quot;https://webpack.kr/concepts/dependency-graph/&quot;&gt;디펜던시 그래프&lt;/a&gt;를 생성한다.
+이렇게 재귀적으로 디펜던시 그래프를 생성하고 모든 모듈을 하나의 &lt;code class=&quot;language-text&quot;&gt;.js&lt;/code&gt; 파일로 만들어 &lt;code class=&quot;language-text&quot;&gt;Output&lt;/code&gt; 옵션에 설정 된 경로로 내보낸다.&lt;/p&gt;
+&lt;p&gt;이 과정에서 &lt;code class=&quot;language-text&quot;&gt;Webpack&lt;/code&gt;은 기본적으로 Javascript 파일과 JSON 파일만 인식한다.&lt;/p&gt;
+&lt;p&gt;따라서 CSS 와 같은 파일을 번들링하기 위해서는 Webpack이 로드할 수 있도록 모듈로 변환하여 디펜던시 그래프에 추가되도록 해야한다. 이 과정에서 사용되는걸 &lt;code class=&quot;language-text&quot;&gt;Loader(로더)&lt;/code&gt;라고 한다.&lt;/p&gt;
+&lt;p&gt;기본적인 모듈 변환 이외에 번들 최적화, 에셋 관리, uglify 등 추가적으로 다양한 작업을 하기 위해서는 &lt;code class=&quot;language-text&quot;&gt;Plugins(플러그인)&lt;/code&gt;이 필요하다. 로더는 번들링을 위해 필요하지만, 플러그인은 번들링이 완료된 파일을 대상으로 처리한다.&lt;/p&gt;
+&lt;p&gt;webpack에 내장된 실행 환경별(production, development) 최적화 세팅을 사용하려면 &lt;a href=&quot;https://webpack.kr/configuration/mode&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Mode&lt;/code&gt;&lt;/a&gt;를 사용한다. develoment 모드 일 때는 트리쉐이킹 같은 코드 최적화를 진행하지 않으니 유의해야한다.&lt;/p&gt;
+&lt;h2&gt;트리쉐이킹&lt;/h2&gt;
+&lt;p&gt;나무를 흔들면 잔가지들이 우수수 떨어지는걸 본 적이 있을것이다.&lt;/p&gt;
+&lt;p&gt;이런 점에서 Webpack은 쓸모없는, 더이상 사용하지 않는 코드는 번들링에서 제외하고 최적화된 파일을 내보내고 싶어한다.&lt;/p&gt;
+&lt;p&gt;예를들어보자.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// BAD&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; test1 &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./test1&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; test2 &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./test2&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; test3 &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./test3&quot;&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// GOOD&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; testFn &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./test1&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; testTwo &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./test2&quot;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; testFn3 &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;./test3&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;첫번째 각 파일의 모든 모듈을 가져온다. 사용하지 않는 모듈이라고 할지라도 가져와서 사용할 수 있도록 상위 스코프에 붙인다.&lt;/p&gt;
+&lt;p&gt;따라서 아래 예시 처럼 사용하는 함수만 가져오거나 default로 export된 모듈만 가져오는거로도 트리쉐이킹을 할 수 있다.&lt;/p&gt;
+&lt;p&gt;webpack4 부터는 &lt;code class=&quot;language-text&quot;&gt;sideEffects&lt;/code&gt; 라는 속성을 지원하며 모듈 단위로 사용되지 않는 모듈은 제거한다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/terser/terser&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;terser&lt;/code&gt;&lt;/a&gt; 플러그인과 같이 사용할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;terser&lt;/code&gt;는 구문 단위로 사이드 이펙트를 감지하지만 여러 상황 속에서 정확하게 사용되지 않는 코드라고 구문을 보고 분석하는건 쉽지 않다. 예를 들어 아래처럼 조건을 통해 사용되거나, 되지 않는 경우를 판별하는 경우가 그렇다. &lt;a href=&quot;https://webpack.kr/guides/tree-shaking/#clarifying-tree-shaking-and-sideeffects&quot;&gt;여기&lt;/a&gt; 코드를 참조하자.&lt;/p&gt;
+&lt;p&gt;그래서 &lt;code class=&quot;language-text&quot;&gt;/*#__PURE__*/&lt;/code&gt; 같은 주석을 사용해서 개발자가 정할 수 있도록 한다.
+해당 코드가 여러 조건을 통해서 사용 되거나, 되지 않거나를 정하는 것 처럼
+&lt;code class=&quot;language-text&quot;&gt;사이드 이팩트&lt;/code&gt;가 생길 여지가 있는지, 없는지를 개발자가 판단하고 &lt;code class=&quot;language-text&quot;&gt;PURE&lt;/code&gt; 여부를 정한다.&lt;/p&gt;
+&lt;p&gt;마지막으로 &lt;a href=&quot;https://webpack.kr/guides/tree-shaking/#conclusion&quot;&gt;Document&lt;/a&gt; 에서는 아래와 같은 결론을 내린다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;ES2015 모듈 구문을 사용해야 하는 것을 배웠습니다. (예: import와 export)&lt;/li&gt;
+&lt;li&gt;컴파일러가 ES2015 모듈 구문을 CommonJS 모듈로 변환하지 않도록 해야 합니다. (이것은 인기 있는 Babel preset @babel/preset-env의 기본 동작입니다. 자세한 내용은 documentation를 참고하세요.)&lt;/li&gt;
+&lt;li&gt;package.json 파일에 “sideEffects” 속성을 추가하세요.&lt;/li&gt;
+&lt;li&gt;최소화와 tree shaking을 포함한 다양한 최적화를 사용하려면 production mode 설정 옵션을 사용하세요.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://ui.toast.com/fe-guide/ko_BUNDLER&quot;&gt;https://ui.toast.com/fe-guide/ko_BUNDLER&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://velog.io/@yon3115/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%ED%95%84%EC%88%98-Webpack%EC%9D%B4%EB%9E%80&quot;&gt;https://velog.io/@yon3115/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C-%ED%95%84%EC%88%98-Webpack%EC%9D%B4%EB%9E%80&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://webpack.kr/concepts/&quot;&gt;https://webpack.kr/concepts/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[폴리필(polyfill)이 무엇인가요]]></title><description><![CDATA[정의 Frontend와 Javascript는 끊임없이 빠르게 발전한다. babel이 무엇인가요? 에서도 살펴보았듯, ES6 Typescript…]]></description><link>https://dding-g.github.io/study-js/폴리필(polyfill)이 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/폴리필(polyfill)이 무엇인가요/</guid><pubDate>Mon, 01 Aug 2022 06:38:08 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
+&lt;p&gt;Frontend와 Javascript는 끊임없이 빠르게 발전한다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../babel%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;babel이 무엇인가요?&lt;/a&gt; 에서도 살펴보았듯, ES6 Typescript 등 개발자 친화적인 플러그인, 문법들이 쏟아져나온다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;babel&lt;/code&gt;은 구형 브라우저에서 개발자가 작성한 코드들이 동작하도록 es5 문법으로 컴파일시켜주는 역할을 한다.&lt;/p&gt;
+&lt;p&gt;그렇다면 &lt;code class=&quot;language-text&quot;&gt;polyfill&lt;/code&gt;은 어떤 역할을 해주는걸까?&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;polyfill&lt;/code&gt; : 충전 솜&lt;/p&gt;
+&lt;p&gt;말 그대로 babel이 es5로 트랜스파일링 할 때 es6 부터 추가된 표준인 &lt;code class=&quot;language-text&quot;&gt;Map, Promise ...&lt;/code&gt; 등은 변환할 수 없기 때문에, 이걸 es5 문법으로 바꿀 수 있도록 부족한 부분을 채워주는 &lt;code class=&quot;language-text&quot;&gt;충전 솜&lt;/code&gt; 같은 친구를 &lt;code class=&quot;language-text&quot;&gt;polyfill&lt;/code&gt; 이라고 한다.&lt;/p&gt;
+&lt;p&gt;대표적으로 &lt;a href=&quot;https://github.com/zloirock/core-js&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;core-js&lt;/code&gt;&lt;/a&gt; 또는 &lt;a href=&quot;https://github.com/financial-times/polyfill-service&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;polyfill-service&lt;/code&gt;&lt;/a&gt; 를 사용한다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[babel이 무엇인가요?]]></title><description><![CDATA[정의 Babel은 Javascript 컴파일러 입니다. Babel Document…]]></description><link>https://dding-g.github.io/study-js/babel이 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/babel이 무엇인가요/</guid><pubDate>Mon, 01 Aug 2022 06:22:03 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Babel은 Javascript 컴파일러 입니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://babeljs.io/docs/en/&quot;&gt;Babel Document&lt;/a&gt;를 들어가면 맨 처음 나오는 문구이다.&lt;/p&gt;
+&lt;p&gt;그러면 컴파일러는 무엇인가?&lt;/p&gt;
+&lt;p&gt;사람의 언어에 가까운 고급 프로그래밍 언어들을 기계가 알아먹을수 있도록 기계어로 변환해주는 친구를 우리는 &lt;code class=&quot;language-text&quot;&gt;컴파일러&lt;/code&gt; 라고 부른다.&lt;/p&gt;
+&lt;p&gt;하지만 Javascript는 인터프리터 언어이다. 컴파일러 언어와는 다르게 기계어로 변환하는 과정을 거치지않고 한줄씩 해석하고 내려가면서 실행시키는 언어이기 때문에 Javascript 컴파일러 라는 단어는 조금 어색하다.&lt;/p&gt;
+&lt;p&gt;하지만 babel을 &lt;code class=&quot;language-text&quot;&gt;컴파일러&lt;/code&gt; 혹은 &lt;code class=&quot;language-text&quot;&gt;트랜스파일러&lt;/code&gt; 라고 부르는 것 보다 더 나은 호칭은 없다.&lt;/p&gt;
+&lt;p&gt;왜 그럴까?&lt;/p&gt;
+&lt;p&gt;Frontend 생태계도 빠르게 발전하면서 여러 기술을 내놓고 있다.&lt;/p&gt;
+&lt;p&gt;Javascript 또한 발전하면서 ES5, ES6, JSX, Typescript 와 같은 이전과 다른 여러가지 문법이 존재한다.&lt;/p&gt;
+&lt;p&gt;새로운것들이 추가되면 브라우저는 새로운 Javascript를 서포트하기 위한 새로운 버전을 출시할 것이다.&lt;/p&gt;
+&lt;p&gt;하지만 모든 사용자들이 항상 최신 버전의 브라우저를 쓴다는 보장은 없다.&lt;/p&gt;
+&lt;p&gt;또 Firefox, Chrome, Safari 등 많은 브라우저들이 존재하고 각기 다른 &lt;a href=&quot;https://namu.wiki/w/%EB%A0%8C%EB%8D%94%EB%A7%81%20%EC%97%94%EC%A7%84&quot;&gt;렌더링 엔진&lt;/a&gt;과 &lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8_%EC%97%94%EC%A7%84&quot;&gt;Javascript 엔진&lt;/a&gt;을 사용한다.&lt;/p&gt;
+&lt;p&gt;따라서 구형 브라우저들을 지원하고 브라우저별로 지원하지 않는 기능을 서포트하기 위한 &lt;a href=&quot;../%ED%8F%B4%EB%A6%AC%ED%95%84(polyfill)%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;polyfill&lt;/code&gt;&lt;/a&gt; 플러그인을 사용하기 위해 우리는 &lt;code class=&quot;language-text&quot;&gt;babel&lt;/code&gt;을 사용한다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[실행 컨텍스트가 무엇인가요?]]></title><description><![CDATA[정의 실행 컨텍스트(execution context)는 Javascript…]]></description><link>https://dding-g.github.io/study-js/실행 컨텍스트가 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/실행 컨텍스트가 무엇인가요/</guid><pubDate>Sun, 31 Jul 2022 07:04:19 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
+&lt;p&gt;실행 컨텍스트(execution context)는 Javascript 동작 원리를 담고 있는 핵심 개념이다.
+소스코드는 두가지 단계를 거쳐 실행된다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;소스코드 평가
+&lt;ul&gt;
+&lt;li&gt;실행 컨텍스트를 생성하고 변수, 함수 등 호이스팅 된 결과를 실행 컨텍스트가 관리하는 스코프(렉시컬 환경의 환경 레코드)에 등록한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;소스코드 실행
+&lt;ul&gt;
+&lt;li&gt;런타임 환경에서 소스코드가 실행되면서 소스코드 실행에 필요한 변수, 함수의 참조를 실행 컨텍스트가 관리하는 스코프에서 가져오고 변수 값의 변경 등 소스코드 실행 결과는 다시 실행 컨텍스트가 관리하는 스코프에 등록된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;각 과정이 진행되면서 필요한 스코프, 식별자, 코드 실행 순서 등 소스코드를 실행하는데 필요한 전반적인 과정들을 등록하고 관리하는 영역을 &lt;code class=&quot;language-text&quot;&gt;실행 컨텍스트&lt;/code&gt; 라고 하며 &lt;code class=&quot;language-text&quot;&gt;스택(Stack)&lt;/code&gt; 자료구조로 관리된다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[프로토타입(prototype)이 무엇인가요?]]></title><description><![CDATA[small  책을 공부하면서 정리했습니다. 왜 Javascript에서는 프로토타입을 사용하는가? Javascript…]]></description><link>https://dding-g.github.io/study-js/프로토타입(prototype)이 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/프로토타입(prototype)이 무엇인가요/</guid><pubDate>Sun, 31 Jul 2022 03:44:25 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;http://image.yes24.com/goods/92742567/XL&quot; alt=&quot;small&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;모던 자바스크립트 Deep Dive&lt;/code&gt; 책을 공부하면서 정리했습니다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;왜 Javascript에서는 프로토타입을 사용하는가?&lt;/h2&gt;
+&lt;p&gt;Javascript는 명령형, 함수형, 프로토타입 기반, 객체지향 프로그래밍을 지원하는 멀티 페러다임 언어이다.
+&lt;code class=&quot;language-text&quot;&gt;객체지향&lt;/code&gt;은 실세계의 실체(사물, 개념)을 인식하는 철학적 사고를 프로그래밍에 접합하려는 시도에서 시작했다.
+사람은 이름, 주소, 신발사이즈, 키, 몸무게 등 수많은 정보를 가지고 있지만, 프로그래밍에서 사용되는 데이터만 뽑아 정의한걸 &lt;code class=&quot;language-text&quot;&gt;추상화(abstract)&lt;/code&gt; 라고 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; person &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;ddingg&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;seoul&apos;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;또한 &lt;code class=&quot;language-text&quot;&gt;상속&lt;/code&gt;은 객체지향 프로그래밍의 핵심 개념으로 코드를 재사용 함으로써 불필요한 중복을 제거하는게 의미가 있다.&lt;/p&gt;
+&lt;p&gt;Javascript에서 상속은 &lt;code class=&quot;language-text&quot;&gt;prototype&lt;/code&gt;을 이용해서 구현한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Circle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;radius&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;radius &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; radius
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token class-name&quot;&gt;Circle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;getArea&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; Math&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;PI&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;radius &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; c1 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Circle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; c2 &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Circle&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getArea &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; c2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getArea&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// true&lt;/span&gt;
+
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;c1&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getArea&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; c2&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getArea&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// false&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위에서 본 것 처럼 c1, c2의 &lt;code class=&quot;language-text&quot;&gt;getArea&lt;/code&gt; 함수는 prototype으로 만들어진 상속받은 객체이기 때문에 같은 값 이라고 판별한다. (상속에 의한 메서드 공유)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;프로토타입은 무엇인가?&lt;/h2&gt;
+&lt;p&gt;자 이제 &lt;code class=&quot;language-text&quot;&gt;prototype&lt;/code&gt; 객체에 대해 살펴보자.
+프로토타입 객체는 객체간 상속을 구현하기 위해 사용된다.
+즉 상속받은 자식 객체는 부모 객체의 &lt;code class=&quot;language-text&quot;&gt;property&lt;/code&gt;를 자유롭게 사용할 수 있다.&lt;/p&gt;
+&lt;p&gt;모든 객체는 &lt;code class=&quot;language-text&quot;&gt;[[Prototype]]&lt;/code&gt; 이라는 내부 슬롯을 가진다.
+여기에 저장되는 프로토타입은 객체 생성 방식에 의해 결정된다.&lt;/p&gt;
+&lt;p&gt;예를들어 객체 리터럴로 생성된 객체는 &lt;code class=&quot;language-text&quot;&gt;Object.prototype&lt;/code&gt;을 가지고 있다고 하지만, 생성자 함수에 의해 생성된 객체는 생성자 함수의 &lt;code class=&quot;language-text&quot;&gt;prototype&lt;/code&gt; 프로퍼티에 바인딩 되어 있는 객체이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 객체 리터럴&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; Person &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ddingg&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;seoul&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 생성자 함수&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;name&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; address&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; name
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;address &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; address
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;[[Prototype]]&lt;/code&gt; 내부 슬롯에는 직접 접근할 수 없지만 &lt;code class=&quot;language-text&quot;&gt;__proto__&lt;/code&gt; 접근자 프로퍼티로 할당된 &lt;code class=&quot;language-text&quot;&gt;prototype&lt;/code&gt;에 접근할 수 있다.
+이건 객체가 직접 소유하는 프로퍼티가 아니라 &lt;code class=&quot;language-text&quot;&gt;Object.prototype&lt;/code&gt;의 프로퍼티이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; parent &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ddingg&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;__proto__ &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; parent
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;obj&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ddingg&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;왜 굳이?? &lt;code class=&quot;language-text&quot;&gt;__proto__&lt;/code&gt;를 사용해서 prototype 에 접근하고 할당하는 방법을 알아야할까?
+상호 참조에 의해 프로토타입 체인이 생성되는걸 방지하기 위해서 이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; parent &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; child &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// BAD : 상호참조&lt;/span&gt;
+child&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;__proto__ &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; parent
+parent&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;__proto__ &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; child&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;프로토타입 체인은 linked list. 즉 단방향으로 구현되어야 한다.
+따라서 아무런 체크없이 무조건 적으로 프로토타입을 교체할 수 없도록 &lt;code class=&quot;language-text&quot;&gt;__proto__&lt;/code&gt; 를 사용해 접근하고 교체하도록 하는 것이다.&lt;/p&gt;
+&lt;p&gt;함수 객체는 생성자 함수가 존재하기 때문에 prototype을 갖지만 arrow-function의 경우는 생성자 함수가 존재하지 않기 떄문에 prototype을 갖지 않는다. (익명 함수의 경우는 생성자 함수를 갖는다.)
+즉, &lt;code class=&quot;language-text&quot;&gt;생성자(constructor)&lt;/code&gt;와 &lt;code class=&quot;language-text&quot;&gt;프로토타입&lt;/code&gt;은 항상 쌍으로 존재한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 객체 리터럴&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; obj &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;//함수 리터럴&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token function-variable function&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;a&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; b&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; b
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 배열 리터럴&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; arr &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;//정규 표현식 리터럴&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; regex &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token regex&quot;&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-source language-regex&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;token regex-delimiter&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;token regex-flags&quot;&gt;gi&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 리터럴 표기법에 의해 생성된 객체도 prototype이 존재한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;프로토타입 생성 시점&lt;/h2&gt;
+&lt;p&gt;사용자 프로토타입은 constructor 함수 정의가 평가되어 객체를 생성하는 시점에 생성된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// [constructor: f]&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; name
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;빌트인 생성자 함수 (Object, String, Number, Array, Function, RegExp, Date, Promise 등등..)도 마찬가지로 생성자 함수가 생성되는 시점에 프로토타입이 생기는데, 모든 빌트인 함수는 전역 객체가 생성되는 시점에 생성된다.
+전역 객체는 코드가 실행되기 전 Javascript 엔진에 의해 생성된다.&lt;/p&gt;
+&lt;h2&gt;프로토타입 체인&lt;/h2&gt;
+&lt;p&gt;Javascript 객체의 프로퍼티(메서드 포함)에 접근하려고 할 때 해당 객체에 접근하려는 프로퍼티가 없다면 &lt;code class=&quot;language-text&quot;&gt;[[Prototype]]&lt;/code&gt; 내부 슬롯의 참조를 따라 부모 프로토타입의 프로퍼티를 순차적으로 탐색한다.
+이를 프로토타입 체인이라고 하고 Javascript가 상속을 구현하는 방법이다.
+최상위는 언제나 &lt;code class=&quot;language-text&quot;&gt;Object.prototype&lt;/code&gt; 이고 여기 &lt;code class=&quot;language-text&quot;&gt;[[Prototype]]&lt;/code&gt; 슬롯은 항상 null이다.&lt;/p&gt;
+&lt;h2&gt;오버라이딩과 프로퍼티 섀도잉&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; name
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+Person&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;property&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;sayHello&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hi Persion!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; me &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;Person&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;ddingg&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function-variable function&quot;&gt;sayHello&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hi Me!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;name&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+me&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;sayHello&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Hi Me! ddingg&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이런식으로 부모 객체의 함수와 같은 이름으로 자식에서 함수를 만들게 되면
+자식에서 선언한 함수가 프로토타입 체인에 따라 먼저 검색되고 호출된다.
+따라서 부모의 프로퍼티는 가려지는 것 처럼 보이는데 이걸 &lt;code class=&quot;language-text&quot;&gt;프로퍼티 섀도잉&lt;/code&gt; 이라고 한다.&lt;/p&gt;
+&lt;p&gt;오버라이딩은 이런 방식으로 구현되는데, Javascript에서는 매개변수에 따라 함수 호출이 변하지는 않기 때문에 &lt;code class=&quot;language-text&quot;&gt;arguments&lt;/code&gt; 를 사용해서 오버로딩처럼 동작하도록 만들 수 있다.&lt;/p&gt;
+&lt;h2&gt;instanceof&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;instanceof&lt;/code&gt; 연산자는 프로토타입의 생성자 함수를 프로토타입 체인에 따라 검색하면서 존재하는지 확인한다. 함수로 표현하면 아래와 같다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isInstanceof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;instance&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; constructor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; prototype &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Object&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getPropertyOf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;instance&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;token comment&quot;&gt;// prototype chain end&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prototype &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; prototype &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; constructor &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;isInstanceof&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;prototype&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; constructor&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;for…in&lt;/h2&gt;
+&lt;p&gt;객체의 &lt;code class=&quot;language-text&quot;&gt;프로퍼티&lt;/code&gt; 를 열거할 때 사용한다.
+프로토타입 체인 상에 존재하는 모든 프로토타입 프로퍼티 중 &lt;code class=&quot;language-text&quot;&gt;[[Enumerable]]&lt;/code&gt;의 값이 &lt;code class=&quot;language-text&quot;&gt;true&lt;/code&gt;인 프로퍼티를 열거한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; person &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;ddingg&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token literal-property property&quot;&gt;address&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;seoul&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; key &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; person&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;/**
+   * name : ddingg
+   * address : seoul
+   */&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot; : &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; person&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;for...of&lt;/code&gt; 와 다른점은 &lt;code class=&quot;language-text&quot;&gt;for...of&lt;/code&gt;는 객체 iterator만 평가하며 iterator의 &lt;code class=&quot;language-text&quot;&gt;value&lt;/code&gt;를 가져오고 &lt;code class=&quot;language-text&quot;&gt;for...in&lt;/code&gt;은 모든 객체를 평가하지만 &lt;code class=&quot;language-text&quot;&gt;key&lt;/code&gt;를 가져온다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;[...values]&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;for...of&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Object.values&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;[...keys]&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;for...in&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;Object.keys&lt;/code&gt;
+&lt;code class=&quot;language-text&quot;&gt;[[...keys], [...values]]&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;Object.entries&lt;/code&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BOJ-14226 (이모티콘)]]></title><description><![CDATA[내용]]></description><link>https://dding-g.github.io/coding-test/BOJ-14226 (이모티콘)/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-14226 (이모티콘)/</guid><pubDate>Fri, 29 Jul 2022 15:00:23 GMT</pubDate><content:encoded>&lt;ul&gt;
+&lt;li&gt;내용&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[BOJ-13913 (숨바꼭질 4)]]></title><description><![CDATA[포인트 백트래킹으로 경로 찾을 때  반례에서 무한루프
+`]]></description><link>https://dding-g.github.io/coding-test/BOJ-13913 (숨바꼭질 4)/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-13913 (숨바꼭질 4)/</guid><pubDate>Fri, 29 Jul 2022 13:24:46 GMT</pubDate><content:encoded>&lt;h2&gt;포인트&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;백트래킹으로 경로 찾을 때 &lt;code class=&quot;language-text&quot;&gt;0 5 &lt;/code&gt; 반례에서 무한루프
+`&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[스코프(Scope)가 무엇인가요?]]></title><description><![CDATA[정의 스코프(Scope). 직역하면 “범위”이다. 즉 변수에 접근할 수 있는 범위 라고 볼 수 있다.
+Javascript에서는 global(전역)과 local(지역). 두가지 스코프가 존재한다. 대부분 C-family language…]]></description><link>https://dding-g.github.io/study-js/스코프(Scope)가 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/스코프(Scope)가 무엇인가요/</guid><pubDate>Fri, 29 Jul 2022 11:49:11 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
+&lt;p&gt;스코프(Scope). 직역하면 “범위”이다. 즉 변수에 접근할 수 있는 범위 라고 볼 수 있다.
+Javascript에서는 global(전역)과 local(지역). 두가지 스코프가 존재한다.&lt;/p&gt;
+&lt;p&gt;대부분 C-family language 는 &lt;code class=&quot;language-text&quot;&gt;블록 레벨 스코프&lt;/code&gt;를 따른다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// block-level scope&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;int&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;x = %d\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token function&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;x = %d\n&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// use of undeclared identifier &apos;x&apos;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;하지만 Javascript는 &lt;code class=&quot;language-text&quot;&gt;함수 레벨 스코프&lt;/code&gt; 를 따른다.
+이는 블록 내에서 선언된 변수는 함수 코드 블록 내에서만 유효하고, 함수 외부에서는 유효하지 않는걸 의미한다.
+단 &lt;code class=&quot;language-text&quot;&gt;let / const&lt;/code&gt; 는 블록레벨 스코프가 적용된다. -&gt; 이게 어떻게 가능한가? -&gt; 실행 컨텍스트에서 스코프 체인으로 관리한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 1&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 1&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; y &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 1&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;y&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 0&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;렉시컬 스코프&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;
+  &lt;span class=&quot;token function&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ?&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// ?&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 예제에서 함수 &lt;code class=&quot;language-text&quot;&gt;bar&lt;/code&gt;의 상위 스코프가 무엇인가에 따라 결과가 바뀐다.
+우리는 두가지 방법을 추측할 수 있는데&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;함수를 어디서 호출하였는가에 따름&lt;/li&gt;
+&lt;li&gt;함수를 어디서 선언했는가에 따름
+위 방법중 하나를 따라 상위 스코프가 결정된다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;우리는 첫번째 방식을 동적 스코프(Dynamic Scope)라고 하고 두번쨰 방식을 렉시컬 스코프(Lexical Scope), 정적 스코프(Static Scope)라고 한다.
+Javascript는 렉시컬 스코프를 따른다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[call, apply, bind 차이점]]></title><description><![CDATA[call. apply는 바로 함수가 호출되고, bind는 할당된 객체를 한번 거쳐서 호출된다.  this를 특정 객체로 지정 가능.
+ 에서 를 호출하면 를 보게됨. 도 call과 유사하다.
+하지만 매개변수를 배열로 받는다는점이 다르다.
+  this…]]></description><link>https://dding-g.github.io/study-js/call, apply, bind 차이점/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/call, apply, bind 차이점/</guid><pubDate>Fri, 29 Jul 2022 07:37:32 GMT</pubDate><content:encoded>&lt;p&gt;call. apply는 바로 함수가 호출되고, bind는 할당된 객체를 한번 거쳐서 호출된다.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;call()&lt;/code&gt; this를 특정 객체로 지정 가능.
+&lt;code class=&quot;language-text&quot;&gt;obj.call(targetObj, &apos;param1&apos;, &apos;param2&apos;)&lt;/code&gt; &lt;code class=&quot;language-text&quot;&gt;obj&lt;/code&gt;에서 &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;를 호출하면 &lt;code class=&quot;language-text&quot;&gt;targetObj&lt;/code&gt;를 보게됨.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;apply()&lt;/code&gt;도 call과 유사하다.
+하지만 매개변수를 배열로 받는다는점이 다르다.
+&lt;code class=&quot;language-text&quot;&gt;obj.apply(targetObj, [&apos;param1&apos;, &apos;param2&apos;])&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;bind()&lt;/code&gt; this를 영구적으로 변환할 수 있다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; test &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;obj&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;targetObj&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;test&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;param1&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;param2&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;요런것도 가능.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; log &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;bind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;document&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// test&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;helloooooo&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// helloooooo&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;scope체인은??&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BOJ-13549 (숨바꼭질3)]]></title><description><![CDATA[포인트 왜 아래는 되고 아래는 안되는지 모르겠다.]]></description><link>https://dding-g.github.io/coding-test/BOJ-13549 (숨바꼭질3)/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-13549 (숨바꼭질3)/</guid><pubDate>Thu, 28 Jul 2022 14:53:59 GMT</pubDate><content:encoded>&lt;h2&gt;포인트&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;왜 아래는 되고
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;next &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;||&lt;/span&gt; next &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;100000&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;continue&lt;/span&gt;
@@ -613,10 +960,97 @@ export default {};
 &lt;li&gt;내용&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[BOJ-17070]]></title><description><![CDATA[내용]]></description><link>https://dding-g.github.io/coding-test/BOJ-17070/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-17070/</guid><pubDate>Mon, 25 Jul 2022 13:59:33 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;내용&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[클로저(Closures)가 무엇인가요]]></title><description><![CDATA[정의 컴퓨터 언어에서 클로저(Closure)는 일급 객체 함수(first-class functions)의 개념을 이용하여 스코프(scope)에 묶인 변수를 바인딩 하기 위한 일종의 기술이다. 기능상으로, 클로저는 함수를 저장한 레코드(record…]]></description><link>https://dding-g.github.io/study-js/클로저가 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/클로저가 무엇인가요/</guid><pubDate>Mon, 25 Jul 2022 08:35:53 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[클로저(Closure)가 무엇인가요]]></title><description><![CDATA[정의 컴퓨터 언어에서 클로저(Closure)는 일급 객체 함수(first-class functions)의 개념을 이용하여 스코프(scope)에 묶인 변수를 바인딩 하기 위한 일종의 기술이다. 기능상으로, 클로저는 함수를 저장한 레코드(record…]]></description><link>https://dding-g.github.io/study-js/클로저가 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/클로저가 무엇인가요/</guid><pubDate>Mon, 25 Jul 2022 08:35:53 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;컴퓨터 언어에서 클로저(Closure)는 일급 객체 함수(first-class functions)의 개념을 이용하여 스코프(scope)에 묶인 변수를 바인딩 하기 위한 일종의 기술이다. 기능상으로, 클로저는 함수를 저장한 레코드(record)이며, 스코프(scope)의 인수(Factor)들은 클로저가 만들어질 때 정의(define)되며, 스코프 내의 영역이 소멸(remove)되었어도 그에 대한 접근(access)은 독립된 복사본인 클로저를 통해 이루어질 수 있다.&lt;/p&gt;
-&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[호이스팅이 무엇인가요]]></title><description><![CDATA[정의 호이스팅이란 인터프리터가 변수와 함수의 메모리 공간을 선언전에 미리 할당하는걸 의미한다. === 변수, 함수 “자리”를 메모리에 먼저 만든 것.
+&lt;/blockquote&gt;
+&lt;p&gt;클로저는 Javascript의 고유 개념이 아니다.
+MDN에서는 &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;클로저는 함수와 함수가 선언된 어휘적 환경의 조합이다.&lt;/code&gt;&lt;/strong&gt; 라고 정의하고 있다.
+아래 예제를 보자&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;javascript&quot;&gt;&lt;pre class=&quot;language-javascript&quot;&gt;&lt;code class=&quot;language-javascript&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;outerFunction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; x &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;innerFunction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;x&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; innerFunction&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; innerFn &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;outerFunction&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token function&quot;&gt;innerFn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 10&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;왜 &lt;code class=&quot;language-text&quot;&gt;10&lt;/code&gt;이 출력될까?
+이건 Javascript가 &lt;code class=&quot;language-text&quot;&gt;렉시컬 스코프&lt;/code&gt; 를 따르고 있기 때문이다.
+&lt;a href=&quot;../%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85(prototype)%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;프로토타입이 무엇인가요?&lt;/a&gt; 를 살펴보면 프로퍼티를 탐색할때 prototype에 정의된 프로퍼티를 탐색하면서 부모 객체로 올라간다는걸 알 수 있다.
+그렇다면 여기서 innerFunction의 프로토타입은 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;일까?
+아니다. &lt;code class=&quot;language-text&quot;&gt;innerFunction&lt;/code&gt;는 상속받지 않았고 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;의 내부 함수일 뿐이다.
+그렇다면 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;에 선언된 &lt;code class=&quot;language-text&quot;&gt;x&lt;/code&gt;는 어떻게 찾은 것 일까?&lt;/p&gt;
+&lt;p&gt;함수 생명주기를 고려해서 실행되는 순서를 생각해보자.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;이 선언된다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;이 실행된다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;가 완료되면서 innerFunciton을 반환하고 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;의 생명주기가 끝난다.&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;innerFunction&lt;/code&gt; 을 저장하고 실행한다.&lt;/li&gt;
+&lt;li&gt;10이 출력된다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;이미 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;의 생명주기가 끝난 시점에서 &lt;code class=&quot;language-text&quot;&gt;x&lt;/code&gt;도 같이 생명주기를 마감한다. 하지만 실행 결과는 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;의 &lt;code class=&quot;language-text&quot;&gt;x&lt;/code&gt;값인 10이 출력된다.&lt;/p&gt;
+&lt;p&gt;이처럼 외부 함수(outerFunction)보다 중첩 함수(innerFunction)가 더 오래 유지되는 경우, 이미 생명주기가 종료된 외부 함수의 변수를 참조할 수 있다.
+&lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;이러한 중첩 함수를 클로저(Closure) 라고 부른다.&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/innerFnDebug.png&quot; alt=&quot;innerFnDebug.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;디버거의 &lt;code class=&quot;language-text&quot;&gt;[[Scopes]]&lt;/code&gt; 부분을 보면 &lt;code class=&quot;language-text&quot;&gt;Closure&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;Script&lt;/code&gt; → &lt;code class=&quot;language-text&quot;&gt;Global&lt;/code&gt; 순으로 나열된 걸 볼 수 있다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;함수 객체의 내부 슬롯 &lt;code class=&quot;language-text&quot;&gt;[[Enviroment]]&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;자 그렇다면 우리는 렉시컬 스코프를 가진 클로저가 이미 생명주기가 끝난 상위 스코프의 변수를 참조할 수 있다는걸 알았다.&lt;/p&gt;
+&lt;p&gt;어떻게 이게 가능한걸까? 생명주기가 끝났음에도 GC에 의해 메모리가 초기화되어야 하는게 아닌가?&lt;/p&gt;
+&lt;p&gt;그렇지않다.&lt;/p&gt;
+&lt;p&gt;GC에 의해 메모리에서 정리되지 않는 이유는 &lt;code class=&quot;language-text&quot;&gt;innerFunction&lt;/code&gt;(클로저)에서 자신이 정의된 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;(상위 스코프)를 기억하고 있기 때문이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;함수는 이 정보를 자신의 내부 슬롯 &lt;code class=&quot;language-text&quot;&gt;[[Enviroment]]&lt;/code&gt;에 자신이 정의된 환경을 저장한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;또한 “생명주기가 끝났다.” 라는건 실행 컨텍스트 스택에서 제거된다는 뜻이다.&lt;/p&gt;
+&lt;p&gt;실행 컨텍스트에서 제거가 되는건 맞지만 클로저 함수의 &lt;code class=&quot;language-text&quot;&gt;[[Enviroment]]&lt;/code&gt; 에 저장된 상위 스코프의 렉시컬 환경까지 소멸하는 것은 아니다.&lt;/p&gt;
+&lt;p&gt;따라서 아직 클로저 &lt;code class=&quot;language-text&quot;&gt;innterFunction&lt;/code&gt;에 의해 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;는 참조받고 있기 때문에 GC는 &lt;code class=&quot;language-text&quot;&gt;outerFunction&lt;/code&gt;의 생명주기가 끝나도 메모리에서 해제하지 않는다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;결론&lt;/h2&gt;
+&lt;p&gt;그렇다면 함수 안에 함수가 선언된 모든 함수를 우리는 클로저라고 불러야 할까?&lt;/p&gt;
+&lt;p&gt;그렇게 되면 이론상 모든 함수는 클로저가 된다.&lt;/p&gt;
+&lt;p&gt;답은 &lt;code class=&quot;language-text&quot;&gt;모든 함수가 클로저는 아니다.&lt;/code&gt; 이다.&lt;/p&gt;
+&lt;p&gt;다시 MDN의 정의로 돌아가보면 &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;클로저는 함수와 함수가 선언된 어휘적 환경의 조합이다.&lt;/code&gt;&lt;/strong&gt; 라는 문구에서 우리는 &lt;em&gt;“어휘적 환경의 &lt;strong&gt;&lt;code class=&quot;language-text&quot;&gt;조합&lt;/code&gt;&lt;/strong&gt;”&lt;/em&gt; 에 초점을 맞춰야한다.&lt;/p&gt;
+&lt;p&gt;즉 상위 스코프 함수의 프로퍼티를 참조하지 않으면 우리는 클로저라고 부르지 않는다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; a &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; b &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bar&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; c &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;
+
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; c
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; bar
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; fn &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;foo&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token function&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;여기 예제에서 &lt;code class=&quot;language-text&quot;&gt;foo&lt;/code&gt; 함수는 &lt;code class=&quot;language-text&quot;&gt;bar&lt;/code&gt; 함수를 리턴한다.
+하지만 &lt;code class=&quot;language-text&quot;&gt;bar&lt;/code&gt; 함수에서는 상위 스코프인 &lt;code class=&quot;language-text&quot;&gt;foo&lt;/code&gt; 함수의 어떤 프로퍼티도 참조하고 있지 않기 때문에 &lt;code class=&quot;language-text&quot;&gt;bar&lt;/code&gt; 함수는 클로저가 아니다.
+GC는 생명주기가 끝났고 어떤 참조도 받지 않는 &lt;code class=&quot;language-text&quot;&gt;foo&lt;/code&gt; 함수를 메모리에서 해제한다.&lt;/p&gt;
+&lt;h2&gt;활용&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; increase &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;let&lt;/span&gt; num &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;
+
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;num
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;increase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 1&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;increase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 2&lt;/span&gt;
+console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;increase&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 3&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;상태값 &lt;code class=&quot;language-text&quot;&gt;num&lt;/code&gt; 을 외부에 노출시키지 않으면서 안전하게 값을 변경한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;이런식으로 상태가 의도치한게 변경되지 않도록 안전하게 은닉하고 특정 함수에게만 상태 병경을 허용하여 상태를 안전하게 변경, 유지하기 위해 사용한다.&lt;/strong&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[호이스팅이 무엇인가요]]></title><description><![CDATA[정의 호이스팅이란 인터프리터가 변수와 함수의 메모리 공간을 선언전에 미리 할당하는걸 의미한다. === 변수, 함수 “자리”를 메모리에 먼저 만든 것.
 Javascript에서는 모든 선언 (var, let, const, function, function…]]></description><link>https://dding-g.github.io/study-js/호이스팅이 무엇인가요/</link><guid isPermaLink="false">https://dding-g.github.io/study-js/호이스팅이 무엇인가요/</guid><pubDate>Sun, 24 Jul 2022 12:47:39 GMT</pubDate><content:encoded>&lt;h2&gt;정의&lt;/h2&gt;
 &lt;p&gt;호이스팅이란 인터프리터가 변수와 함수의 메모리 공간을 선언전에 미리 할당하는걸 의미한다. === 변수, 함수 “자리”를 메모리에 먼저 만든 것.
 Javascript에서는 모든 선언 (var, let, const, function, function* class)를 호이스팅한다.&lt;/p&gt;
@@ -693,6 +1127,10 @@ CJS에서 &lt;code class=&quot;language-text&quot;&gt;dynamic import&lt;/code&gt
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;h3&gt;AMD(Asynchronous Module Definition)&lt;/h3&gt;
+&lt;p&gt;브라우저단에서 사용하는 비동기 모듈 시스템.
+과거 CommonJS는 동기적인 모듈 시스템을 추구했다면 AMD는 브라우저에서 사용되기 위한 비동기로 동작하는 모듈 시스템을 고민했다.
+브라우저에서는 동기적으로 모듈을 다운받게 되면 모듈이 모두 다운로드 받아질 때 까지 기다려야 하기 때문에 비동기 모듈 시스템이 필요했는데, 안타깝게 표준이 되지는 못했다.&lt;/p&gt;
 &lt;h3&gt;CommonJS&lt;/h3&gt;
 &lt;p&gt;Javascript에 모듈화를 도입했던 선두주자.
 &lt;code class=&quot;language-text&quot;&gt;모듈&lt;/code&gt;은 위에서 말했다시피 다른 모듈이 접근할 수 없는 자신만의 독립적인 영역(&lt;code class=&quot;language-text&quot;&gt;Scope&lt;/code&gt;)을 가지는게 중요하다. 또한 선택적으로 외부에 공개(&lt;code class=&quot;language-text&quot;&gt;export&lt;/code&gt;) 할 수 있어야 하고 다른 모듈을 가져올 수 있어야 한다.(&lt;code class=&quot;language-text&quot;&gt;import&lt;/code&gt;)
@@ -710,7 +1148,31 @@ ES Modules은 Javascript의 표준이 되었다.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;ESM과 CJS를 두고 벌이는 논쟁은 정말 많다. Pure ESM의 댓글만 봐도 수많은 의견들을 주고받는걸 볼 수 있다.
 하지만 Pure ESM에 대한 방향성도 그렇고 CommonJS 보다 ESM으로 흘러가는 것 같다.
-ESM은 CJS를 수용할 수 있으나 CJS는 ESM을 수용하기 까다롭기 때문이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[BOJ-1038]]></title><description><![CDATA[내용]]></description><link>https://dding-g.github.io/coding-test/BOJ-1038/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-1038/</guid><pubDate>Wed, 20 Jul 2022 14:40:57 GMT</pubDate><content:encoded>&lt;ul&gt;
+ESM은 CJS를 수용할 수 있으나 CJS는 ESM을 수용하기 까다롭기 때문이다.&lt;/p&gt;
+&lt;h3&gt;UMD&lt;/h3&gt;
+&lt;p&gt;과거 AMD, CommonJS 가 서로 쓰이던 때에, 문제는 두가지 모듈 시스템을 사용한다는 것이였다.
+따라서 CommonJS와 AMD가 공통되는 방식으로 동작하면 편리할거라 느끼고 두가지 모듈 시스템중 어떤걸 사용해도 문제가 없도록 UMD가 등장했다.
+모듈 시스템이라기 보다는 디자인 패턴에 가깝다.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;&lt;strong&gt;이해를 돕기위해 &lt;a href=&quot;https://www.zerocho.com/category/JavaScript/post/5b67e7847bbbd3001b43fd73&quot;&gt;ZeroCho - AMD, CommonJS, UMD 모듈&lt;/a&gt;의 UMD 코드를 가져왔습니다.&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;root&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; factory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; define &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;function&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; define&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;amd&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// AMD&lt;/span&gt;
+    &lt;span class=&quot;token function&quot;&gt;define&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;jquery&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;zerocho&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; factory&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;typeof&lt;/span&gt; module &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;object&apos;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// CommonJS&lt;/span&gt;
+    module&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;exports &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;jquery&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;zerocho&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// window&lt;/span&gt;
+    root&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;myModule &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;factory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;root&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;$&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; root&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token constant&quot;&gt;Z&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;$&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Z&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; $&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token literal-property property&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token constant&quot;&gt;Z&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;참고&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://beomy.github.io/tech/javascript/cjs-amd-umd-esm/&quot;&gt;[JavaScript] CJS, AMD, UMD, ESM&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.zerocho.com/category/JavaScript/post/5b67e7847bbbd3001b43fd73&quot;&gt;ZeroCho - AMD, CommonJS, UMD 모듈&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[BOJ-1038]]></title><description><![CDATA[내용]]></description><link>https://dding-g.github.io/coding-test/BOJ-1038/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-1038/</guid><pubDate>Wed, 20 Jul 2022 14:40:57 GMT</pubDate><content:encoded>&lt;ul&gt;
 &lt;li&gt;내용&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[BOJ-2667]]></title><description><![CDATA[포인트 dfs로 상하좌우를 탐색]]></description><link>https://dding-g.github.io/coding-test/BOJ-2667/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/BOJ-2667/</guid><pubDate>Wed, 20 Jul 2022 13:47:28 GMT</pubDate><content:encoded>&lt;h2&gt;포인트&lt;/h2&gt;
 &lt;ul&gt;
@@ -897,6 +1359,28 @@ HTML 파서로 파싱을 해야하는데 이유는 아래와 같다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;배치(reflow)&lt;/strong&gt;
 렌더러가 생성되어 트리에 추가될 때 크기와 위치 정보는 없는데 이렇게 뷰 포트 내에서 요소들의 정확한 위치와 크기를 계산하는 과정을 배치 또는 리플로라고 부른다.
 HTML은 흐름 기반의 배치모델을 사용하므로 왼쪽에서 오른쪽, 위에서 아래로 흐르는 방향으로 요소가 배치된다.&lt;/p&gt;
+&lt;p&gt;reflow가 불필요하게 일어나게 되면 심각한 성능 문제를 야기할 수 있다.
+자식, 부모, 조상등 관련된 모든 요소들이 layouto 배치부터 다시 계산해야 하기 때문이다.
+reflow를 야기하는 요소는 아래와 같은데 자세한 이벤트는&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://gist.github.com/paulirish/5d52fb081b3570c81e3a&quot;&gt;what-force-layout&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://daumui.tistory.com/12&quot;&gt;[성능] Reflow 원인과 마크업 최적화 Tip&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;를 참조하자.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;윈도우 리사이징 (뷰포트 변화는 Global Layout에 영향)&lt;/li&gt;
+&lt;li&gt;폰트의 변화 (height계산에 영향을 주므로 Global Layout에 영향)&lt;/li&gt;
+&lt;li&gt;스타일 추가 또는 제거&lt;/li&gt;
+&lt;li&gt;내용 변화 (인풋박스에 텍스트 입력 등..)&lt;/li&gt;
+&lt;li&gt;:hover와 같은 CSS Pseudo Class&lt;/li&gt;
+&lt;li&gt;(CSS: The Definitive Guide: The Definitive Guide 55p에서, hover할 시 나타나는 변화로 인한 우려가 생긴다는 의미인 듯 합니다.)&lt;/li&gt;
+&lt;li&gt;클래스 Attribute의 동적 변화&lt;/li&gt;
+&lt;li&gt;JS를 통한 DOM 동적 변화&lt;/li&gt;
+&lt;li&gt;엘리먼트에 대한 offsetWidth / offsetHeight (화면에서 보여지는 좌표) 계산시&lt;/li&gt;
+&lt;li&gt;스타일 Attribute 동적변화&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;더치 비트 체제&lt;/strong&gt;
 소소한 변경 때문에 전체를 다시 배치하지 않기 위해 브라우저는 “더티 비트” 체제르 사용한다.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;전역배치와 점증 배치&lt;/strong&gt;
@@ -1142,10 +1626,11 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 를 다른 코드와 같이 실행시켜보면 call stack이 빈 후에 이벤트 루프가 동작한다는걸 알 수 있다.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[FE 면접 질문 연습]]></title><description><![CDATA[참고 사이트 https://realmojo.tistory.com/300 https://xiubindev.tistory.com/119 CS GET, POST가 어떻게 다른지 설명해주세요 GET은 Idempotent, POST는 Non-idempotent…]]></description><link>https://dding-g.github.io/study-cs/FE 면접 질문 연습/</link><guid isPermaLink="false">https://dding-g.github.io/study-cs/FE 면접 질문 연습/</guid><pubDate>Fri, 15 Jul 2022 12:04:15 GMT</pubDate><content:encoded>&lt;p&gt;참고 사이트&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[FE 면접 질문 연습]]></title><description><![CDATA[참고 사이트 https://realmojo.tistory.com/300 https://xiubindev.tistory.com/119 https://h5bp.org/Front-end-Developer-Interview-Questions…]]></description><link>https://dding-g.github.io/study-cs/FE 면접 질문 연습/</link><guid isPermaLink="false">https://dding-g.github.io/study-cs/FE 면접 질문 연습/</guid><pubDate>Fri, 15 Jul 2022 12:04:15 GMT</pubDate><content:encoded>&lt;p&gt;참고 사이트&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://realmojo.tistory.com/300&quot;&gt;https://realmojo.tistory.com/300&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;https://xiubindev.tistory.com/119&quot;&gt;https://xiubindev.tistory.com/119&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://h5bp.org/Front-end-Developer-Interview-Questions/translations/korean/&quot;&gt;https://h5bp.org/Front-end-Developer-Interview-Questions/translations/korean/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;CS&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;GET, POST가 어떻게 다른지 설명해주세요&lt;/strong&gt;&lt;/p&gt;
@@ -1161,8 +1646,12 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;p&gt;&lt;a href=&quot;../../study-js/Javascript%EC%97%90%EC%84%9C%EC%9D%98%20%EB%AA%A8%EB%93%88%20%EC%8B%9C%EC%8A%A4%ED%85%9C/index.md&quot;&gt;&lt;strong&gt;모듈 시스템의 차이점&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;../../study-js/%ED%98%B8%EC%9D%B4%EC%8A%A4%ED%8C%85%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;strong&gt;호이스팅이 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;../../study-js/%ED%81%B4%EB%A1%9C%EC%A0%80%EA%B0%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;strong&gt;클로저는 무엇인가요? 원리와 왜 사용하는지 설명해주세요.&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;../../study-js/%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EB%A3%A8%ED%94%84%EB%8A%94%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94?/index.md&quot;&gt;&lt;strong&gt;이벤트 루프는 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;cjs esm의 차이, 왜 Typescript에서는 cjs를 사용하지 않을까?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../study-js/%EC%9D%B4%EB%B2%A4%ED%8A%B8%20%EB%A3%A8%ED%94%84%EB%8A%94%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;strong&gt;이벤트 루프는 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../study-js/%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85(prototype)%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;strong&gt;프로토타입이 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../study-js/%EC%8B%A4%ED%96%89%20%EC%BB%A8%ED%85%8D%EC%8A%A4%ED%8A%B8%EA%B0%80%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;strong&gt;실행 컨텍스트가 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../study-js/babel%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;strong&gt;babel이 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../study-js/%ED%8F%B4%EB%A6%AC%ED%95%84(polyfill)%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;strong&gt;polyfill이 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;../../study-js/webpack%EC%9D%B4%20%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80%EC%9A%94/index.md&quot;&gt;&lt;strong&gt;webpack이 무엇인가요?&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;React&lt;/h2&gt;
 &lt;h2&gt;HTML CSS&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;CSS에서 margin과 padding에 대해서 설명해주세요&lt;/strong&gt;&lt;/p&gt;
@@ -1172,8 +1661,10 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;h2&gt;Frontend&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;../%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B0%80%20%EC%82%AC%EC%9A%A9%EC%9E%90%EC%97%90%EA%B2%8C%20%EB%B3%B4%EC%9D%B4%EA%B8%B0%EA%B9%8C%EC%A7%80/index.md&quot;&gt;&lt;strong&gt;홈페이지가 사용자에게 보이기 까지&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;ETC&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;자기소개&lt;/strong&gt;
-기술 스택, 전 회사 경력.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;자기소개&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;기술 스택, 전 회사 경력.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;debounce 쓰로틀링을 설명하고 두개의 차이를 설명하라&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;정리 필요&lt;/li&gt;
@@ -1199,10 +1690,6 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;클로저 뭔지, 어떻게 사용하는지&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;프로토타입이 뭔지&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;프로토타입은 객체이고 상속을 받은 자식 객체에게&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;JS에서 프로미스는 어떻게 동작하는지&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;pending rejected fullfilled&lt;/li&gt;
@@ -1263,8 +1750,8 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Property attribute&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Object freeze, Object seal&lt;/li&gt;
-&lt;li&gt;Prevent Extension&lt;/li&gt;
+&lt;li&gt;Object freeze, Object seal, Object preventExtensions&lt;/li&gt;
+&lt;li&gt;readOnly, edit 가능. 속성값 추가/삭제 불가, 확장만 불가.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;strong&gt;크로스 브라우징이 무엇인가요?&lt;/strong&gt;&lt;/p&gt;
@@ -1297,6 +1784,229 @@ console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span cl
 &lt;ul&gt;
 &lt;li&gt;css @import 피하기&lt;/li&gt;
 &lt;li&gt;body안에서 script 사용할때 dom 수정하는 부분 주의&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;0729&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;다음 코드가 즉시 호출 함수 표현식(IIFE)로 동작하지 않는 이유에 관해서 설명해보세요: function foo(){ }();. IIFE로 만들기 위해서는 어떻게 해야 하나요?&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;다음주 월요일(8/1)은 Javascript 문제 5개 받고 CSS 5개 물어보기.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;0731 정리 목록&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;eval 함수는 무엇인가요&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;position relative, absolute 의 속도 차이를&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;releative : layout 과정 후 &lt;a href=&quot;https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Normal_Flow&quot;&gt;normal flow&lt;/a&gt;를 거쳐서 포지셔닝을 거친다.
+&lt;ul&gt;
+&lt;li&gt;releative 안에서 reflow가 일어나면 문서 전체가 리렌더 되는거나 마찬가지. height, width 수정 되면 형제, 부모 모두 수정 되어하기 때문&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;absolute : normal flow 과정을 거치지 않고 바로 포지셔닝을 거친다.&lt;/li&gt;
+&lt;li&gt;absolute -&gt; 부모중 position 이 default 가 아닌걸 기준.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CSR vs SSR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SEO에 노출되는 첫 페이지만 SSR로. 나머지는 CSR 페이지로 빌드&lt;/li&gt;
+&lt;li&gt;열악한 글로벌 환경을 고려하면 CSR도 고려해볼만함.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;script&gt;, &amp;lt;script async&gt;와 &amp;lt;script defer&gt;&lt;/code&gt;의 차이점에 관해 설명해주세요.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;body 하단에 script 를 실행시키는 이유와 관련.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;async defer 모두 백그라운드에서 script 동작.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;async -&gt; GA같은 곳에서 사용함.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;이벤트 버블링(Event Bubbling)에 대해서 설명하세요.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;preventDefault, stopPropagation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SPA에서 SEO에 유리하도록 만들기 위한 방법에 대해 설명해주세요.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;SSR, Pre-rendering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;이벤트 캡쳐링(Event Capturing)에 대해서 설명하세요.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;React에서 state를 왜 immutable하게 관리하는가?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;immutable하게 관리하지 않으면 객체 전체를 rerendering&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;wrapper객체와 원시값&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;this는 무엇인가?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;일반 함수, 생성자 함수, 객체 메서드, addEventListener 안에서 각각 this가 바인딩 되는게 다름.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;동등(===),일치(==) 연산자의 피연산자를 함수로 사용했을때 어떻게 비교하나요?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;궁금한거&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;vac 패턴, atomic 패턴이 무엇인가요?&lt;/li&gt;
+&lt;li&gt;blob 패턴이 무엇인가요?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;function과 class의 차이&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;개발하면서 무엇에 스트레스를 받나요?&lt;/li&gt;
+&lt;li&gt;UTF-8, 유니코드, UTF-16 이 무엇인가요?&lt;/li&gt;
+&lt;li&gt;HTTP1.1, HTTP2 차이&lt;/li&gt;
+&lt;li&gt;HTTPS 암호화 방식&lt;/li&gt;
+&lt;li&gt;OAuth 2.0&lt;/li&gt;
+&lt;li&gt;TCP/IP 3 way handshake&lt;/li&gt;
+&lt;li&gt;HTTP Status code간 비슷한것들 차이&lt;/li&gt;
+&lt;li&gt;HTTP Method 설명&lt;/li&gt;
+&lt;li&gt;알고리즘 시간 복잡도&lt;/li&gt;
+&lt;li&gt;ES6, V8 엔진 동작 원리&lt;/li&gt;
+&lt;li&gt;OSI 7계층 (데이터 전달 과정)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;event delegation&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;특정 Element만을 위해 이벤트를 등록하지 않고 dataset등을 활용하여 하나의 handler에 &lt;code class=&quot;language-text&quot;&gt;event.target&lt;/code&gt; 을 받아 해당 데이터로 이벤트를 구분하여 범용적으로 사용할 수 있도록 하는 패턴&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://ko.javascript.info/event-delegation&quot;&gt;링크&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;javascript에서 this가 동작하는 원리
+&lt;a href=&quot;https://cocoder16.tistory.com/45&quot;&gt;this의 동적 바인딩?&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;전역 : &lt;code class=&quot;language-text&quot;&gt;this&lt;/code&gt;는 strict 모드와 상관없이 전역 객체를 참조함&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;현재 실행중인 컨텍스트와 관계 없이 동작하려면 &lt;code class=&quot;language-text&quot;&gt;globalThis&lt;/code&gt; 사용.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;함수&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;단순 호출 : 전역 환경에서는 전역 객체(&lt;code class=&quot;language-text&quot;&gt;window&lt;/code&gt;) 호출.&lt;/li&gt;
+&lt;li&gt;화살표 함수 : 상위 스코프를 가르킴. 전역 환경에서는 전역 객체 호출.&lt;/li&gt;
+&lt;li&gt;생성자
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;new&lt;/code&gt; 키워드로 함수를 만들면 새로 생긴 객체를 지칭한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;객체내부의 함수
+&lt;ul&gt;
+&lt;li&gt;객체 자신을 가르킨다.&lt;/li&gt;
+&lt;li&gt;단, 함수가 호출될 때 동적 바인딩 된다&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;addEventListener&lt;/code&gt; 에서&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이벤트를 발생시킨 Element를 지칭&lt;/li&gt;
+&lt;li&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;js&quot;&gt;&lt;pre class=&quot;language-js&quot;&gt;&lt;code class=&quot;language-js&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;// 처리기로 호출하면 관련 객체를 파랗게 만듦&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bluify&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token parameter&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// 언제나 true&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;currentTarget&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token comment&quot;&gt;// currentTarget과 target이 같은 객체면 true&lt;/span&gt;
+  console&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; e&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;target&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;style&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;backgroundColor &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;#A5D9F3&quot;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 문서 내 모든 요소의 목록&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; elements &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; document&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;getElementsByTagName&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;*&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;// 어떤 요소를 클릭하면 파랗게 변하도록&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;// bluify를 클릭 처리기로 등록&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&lt;/span&gt; elements&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;length&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt; i&lt;span class=&quot;token operator&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  elements&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;i&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;addEventListener&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;click&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; bluify&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;인라인 이벤트&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;button onclick=&quot;alert(this.tagName.toLowerCase());&quot;&gt; this : 자기 자신(button) &amp;lt;/button&gt; &lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;button onclick=&quot;alert((function() { return this; })());&quot;&gt; this : 전역 window &amp;lt;/button&gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;event 버블링, 캡쳐링&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이벤트가 퍼질때 밑으로 내려가면서 이벤트를 발생시키는걸 캡쳐링, 올라오는걸 버블링 이라고 함.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;lazy 로딩이 동작하는 방식&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;React.lazy 를 사용하면?&lt;/li&gt;
+&lt;li&gt;webpack에서 번들해줄떄 포함하지 않고 번들함. 필요할때 받는 방식.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DOMContentLoaded evnet&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DOM 구성이 완료되면 불림&lt;/li&gt;
+&lt;li&gt;defer는 해당 이벤트 이전에 불림&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;loaded event&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;외부 리소스 까지 모두 다운로드가 완료 되면 불림.&lt;/li&gt;
+&lt;li&gt;async는 그냥 스크립트 다운로드가 완료되면 실행되기 때문에 노상관&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;translate animation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;z-index&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CSS에서 ‘C’는 Cascading을 의미합니다. Cascading에 관해서 설명해주세요. 또 cascading system의 장점은 무엇인가요?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;“우선순위”에 따라.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;inline과 inline-block의 차이점은 무엇인가요?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;CSS Selector가 어떠한 원리로 동작하는지 설명해주세요.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;효율성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item><item><title><![CDATA[코딩테스트 로드맵]]></title><description><![CDATA[순서 여기 블로그에서 제시한 로드맵 바탕으로 따라갑니다. 풀이 현황 코딩테스트 시작을 위한 백준문제 추천 시작 & 구현 백준 2438번. 별 찍기 - 1 백준 2439번. 별 찍기 - 2 백준 2440번. 별 찍기 - 3 백준 244…]]></description><link>https://dding-g.github.io/coding-test/코딩테스트 로드맵/</link><guid isPermaLink="false">https://dding-g.github.io/coding-test/코딩테스트 로드맵/</guid><pubDate>Thu, 14 Jul 2022 01:04:54 GMT</pubDate><content:encoded>&lt;h2&gt;순서&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://covenant.tistory.com/235&quot;&gt;여기 블로그&lt;/a&gt;에서 제시한 로드맵 바탕으로 따라갑니다.&lt;/li&gt;
