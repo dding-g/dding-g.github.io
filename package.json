@@ -1,61 +1,25 @@
 {
   "name": "dding-glog",
-  "private": true,
-  "description": "조명근 개인 blog",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "gatsby": "^4.15.2",
-    "gatsby-plugin-feed": "^4.15.1",
-    "gatsby-plugin-gatsby-cloud": "^4.15.0",
-    "gatsby-plugin-google-analytics": "^4.15.0",
-    "gatsby-plugin-image": "^2.15.1",
-    "gatsby-plugin-manifest": "^4.15.1",
-    "gatsby-plugin-offline": "^5.15.1",
-    "gatsby-plugin-react-helmet": "^5.15.0",
-    "gatsby-plugin-sharp": "^4.15.1",
-    "gatsby-remark-copy-linked-files": "^5.15.0",
-    "gatsby-remark-images": "^6.15.1",
-    "gatsby-remark-prismjs": "^6.15.0",
-    "gatsby-remark-responsive-iframe": "^5.15.0",
-    "gatsby-remark-smartypants": "^5.15.0",
-    "gatsby-source-filesystem": "^4.15.0",
-    "gatsby-transformer-remark": "^5.15.1",
-    "gatsby-transformer-sharp": "^4.15.1",
-    "gh-pages": "^4.0.0",
-    "prismjs": "^1.28.0",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-helmet": "^6.1.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.75"
+    "next": "12.3.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "hygen": "^6.2.7",
-    "prettier": "^2.6.2"
+    "@types/node": "18.7.23",
+    "@types/react": "18.0.21",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1",
+    "typescript": "4.8.3"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "0BSD",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
-  },
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "deploy": "gatsby build && rm -rf node_modules/.cache/gh-pages && gh-pages -d public -b gh-pages",
-    "deploy:only": "rm -rf node_modules/.cache/gh-pages && gh-pages -d public",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "new:post": "hygen post new with-prompt"
-  }
+  "packageManager": "yarn@3.2.3"
 }
