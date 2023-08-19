@@ -15,3 +15,11 @@ tags:
     "css.validate": false,
     "editor.inlineSuggest.enabled": true
     ```
+
+- eslint auto-fix all when save file
+
+  - ```
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    }
+    ```
