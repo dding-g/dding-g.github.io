@@ -1,0 +1,160 @@
+{
+  "main": {
+    "id": "1f054b22b7a924d9",
+    "type": "split",
+    "children": [
+      {
+        "id": "4e2bc736a0d4be40",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7cea7e42021e1019",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "content/blog/회고/2023 회고/\bindex.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8c571e9fe0c98cf5",
+    "type": "split",
+    "children": [
+      {
+        "id": "d6fab03a3d680cbd",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7eadfe874d078f3f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "ca36956b25b95a36",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2de7e3c74ba6ff10",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1aae016a0c950051",
+    "type": "split",
+    "children": [
+      {
+        "id": "f45d6b471c50fb25",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3e8976737a03bf36",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/blog/회고/2023 회고/\bindex.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "abbdee4f860b00af",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "content/blog/회고/2023 회고/\bindex.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ea6b0b6e0b942ed4",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "9b9f5924a4cdbddd",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "content/blog/회고/2023 회고/\bindex.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "7cea7e42021e1019",
+  "lastOpenFiles": [
+    "content/blog/회고/2023 회고/2023.md",
+    "content/blog/회고/2023 회고/\bindex.md",
+    "content/blog/infra/ECS 전환/index.md",
+    "content/blog/infra/ECS 전환",
+    "content/blog/infra",
+    "content/blog/회고/2023 회고/attachments/스크린샷 2024-01-11 오전 12.23.52.png",
+    "content/blog/회고/2023 회고/attachments",
+    "스크린샷 2024-01-11 오전 12.16.21.png"
+  ]
+}
