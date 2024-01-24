@@ -44,7 +44,7 @@
   --lineHeight-none: 1;
   --lineHeight-tight: 1.1;
   --lineHeight-normal: 1.5;
-  --lineHeight-relaxed: 1.625;
+  --lineHeight-relaxed: 1.7;
   /* 1.200 Minor Third Type Scale */
   --fontSize-0: 0.833rem;
   --fontSize-1: 1rem;
@@ -171,7 +171,7 @@ ul,
 ol {
   margin-left: var(--spacing-0);
   margin-right: var(--spacing-0);
-  padding: var(--spacing-4);
+  padding: var(--spacing-2) var(--spacing-4);
   margin-bottom: var(--spacing-8);
   list-style-position: outside;
   list-style-image: none;
@@ -192,8 +192,8 @@ li *:last-child {
 }
 
 li > ul {
-  margin-left: var(--spacing-8);
-  margin-top: calc(var(--spacing-8) / 2);
+  /* margin-left: var(--spacing-8);
+  margin-top: calc(var(--spacing-8) / 2); */
 }
 
 blockquote {

@@ -1,0 +1,20 @@
+{
+  "accessKey": "AKIASKKRE5BQ2724PXYF",
+  "secretKey": "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",
+  "region": "ap-northeast-2",
+  "bucket": "ddinglog-image",
+  "folder": "${year}-${month}-${day}",
+  "imageUrlPath": "https://ddinglog-image.s3.ap-northeast-2.amazonaws.com/",
+  "uploadOnDrag": true,
+  "localUpload": false,
+  "localUploadFolder": "",
+  "useCustomEndpoint": false,
+  "customEndpoint": "",
+  "forcePathStyle": false,
+  "useCustomImageUrl": false,
+  "customImageUrl": "",
+  "uploadVideo": false,
+  "uploadAudio": false,
+  "uploadPdf": true,
+  "bypassCors": false
+}
