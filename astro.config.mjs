@@ -1,30 +1,30 @@
-import tailwind from "@astrojs/tailwind"
-import Compress from "astro-compress"
-import icon from "astro-icon"
-import { defineConfig } from "astro/config"
-import Color from "colorjs.io"
-import rehypeAutolinkHeadings from "rehype-autolink-headings"
-import rehypeKatex from "rehype-katex"
-import rehypeSlug from "rehype-slug"
-import remarkMath from "remark-math"
-import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs"
-import svelte from "@astrojs/svelte"
-import swup from '@swup/astro';
+import svelte from '@astrojs/svelte'
+import tailwind from '@astrojs/tailwind'
+import swup from '@swup/astro'
+import Compress from 'astro-compress'
+import icon from 'astro-icon'
+import { defineConfig } from 'astro/config'
+import Color from 'colorjs.io'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
+import rehypeKatex from 'rehype-katex'
+import rehypeSlug from 'rehype-slug'
+import remarkMath from 'remark-math'
+import { remarkReadingTime } from './src/plugins/remark-reading-time.mjs'
 
-const oklchToHex = (str) => {
+const oklchToHex = str => {
   const DEFAULT_HUE = 250
   const regex = /-?\d+(\.\d+)?/g
   const matches = str.string.match(regex)
   const lch = [matches[0], matches[1], DEFAULT_HUE]
-  return new Color("oklch", lch).to("srgb").toString({
-    format: "hex",
+  return new Color('oklch', lch).to('srgb').toString({
+    format: 'hex',
   })
 }
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fuwari.vercel.app/",
-  base: "/",
+  site: 'https://dding-g.github.io/',
+  output: 'static',
   integrations: [
     tailwind(),
     swup({
@@ -39,10 +39,10 @@ export default defineConfig({
     }),
     icon({
       include: {
-        "material-symbols": ["*"],
-        "fa6-brands": ["*"],
-        "fa6-regular": ["*"],
-        "fa6-solid": ["*"],
+        'material-symbols': ['*'],
+        'fa6-brands': ['*'],
+        'fa6-regular': ['*'],
+        'fa6-solid': ['*'],
       },
     }),
     Compress({
@@ -58,21 +58,21 @@ export default defineConfig({
       [
         rehypeAutolinkHeadings,
         {
-          behavior: "append",
+          behavior: 'append',
           properties: {
-            className: ["anchor"],
+            className: ['anchor'],
           },
           content: {
-            type: "element",
-            tagName: "span",
+            type: 'element',
+            tagName: 'span',
             properties: {
-              className: ["anchor-icon"],
+              className: ['anchor-icon'],
               'data-pagefind-ignore': true,
             },
             children: [
               {
-                type: "text",
-                value: "#",
+                type: 'text',
+                value: '#',
               },
             ],
           },
