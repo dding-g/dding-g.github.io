@@ -1,0 +1,151 @@
+{
+  "main": {
+    "id": "9719b5727d35b5f3",
+    "type": "split",
+    "children": [
+      {
+        "id": "1e4484eb866d31ec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "5efcb530bcd9096f",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2d90437662957d78",
+    "type": "split",
+    "children": [
+      {
+        "id": "0cca89b41a619988",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "398387cd3f2f77ce",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "1c80dfa9ac9493c7",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e83fec17f37a1d98",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "23d491f2b08d504e",
+    "type": "split",
+    "children": [
+      {
+        "id": "2a71e75a26694916",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9fc135f10a87a964",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c8ca307595cbcc7f",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8e71825e381d11ae",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "cc15ffaf8ee20b04",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:퀵 스위처 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 데일리 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "5efcb530bcd9096f",
+  "lastOpenFiles": [
+    "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요/스크린샷 2024-04-26 오전 12.25.18.png",
+    "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요/index.md",
+    "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요",
+    "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요?/스크린샷 2024-04-26 오전 12.25.18.png",
+    "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요?/어떤 개발자와 같이 일하고 싶으신가요?.md",
+    "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요?/index.md",
+    "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요?"
+  ]
+}
