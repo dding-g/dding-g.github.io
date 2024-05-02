@@ -24,6 +24,7 @@ const oklchToHex = str => {
 // https://astro.build/config
 export default defineConfig({
   site: 'https://dding-g.github.io/',
+  // base: '/docs',
   output: 'static',
   integrations: [
     tailwind(),

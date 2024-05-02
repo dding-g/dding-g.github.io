@@ -1,11 +1,11 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Trigger the workflow every time you push to the `main` branch
-  # Using a different branch name? Replace `main` with your branch’s name
+  # 'main' 브랜치로 푸시할 때마다 워크플로를 트리거합니다.
+  # 다른 브랜치 이름을 사용하시나요? `main`을 브랜치 이름으로 바꾸세요.
   push:
-    branches: [ gh-pages ]
-  # Allows you to run this workflow manually from the Actions tab on GitHub.
+    branches: [ astro ]
+  # GitHub의 Actions 탭에서 이 워크플로를 수동으로 실행할 수 있습니다.
   workflow_dispatch:
 
 # Allow this job to clone the repo and create a page deployment
@@ -23,9 +23,9 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v2
         # with:
-          # path: . # The root location of your Astro project inside the repository. (optional)
-          # node-version: 20 # The specific version of Node that should be used to build your site. Defaults to 20. (optional)
-          # package-manager: pnpm@latest # The Node package manager that should be used to install dependencies and build your site. Automatically detected based on your lockfile. (optional)
+          # path: . # 저장소 내 Astro 프로젝트의 루트 위치입니다. (선택 사항)
+          # node-version: 20 # 사이트를 빌드하는 데 사용해야 하는 특정 버전의 Node입니다. 기본값은 20입니다. (선택 사항)
+          # package-manager: pnpm@latest # 종속성을 설치하고 사이트를 빌드하는 데 사용해야 하는 노드 패키지 관리자입니다. lockfile을 기반으로 자동으로 감지됩니다. (선택 사항)
 
   deploy:
     needs: build
