@@ -11,8 +11,12 @@
             "id": "5efcb530bcd9096f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "src/content/posts/infra/FE개발자가 개발서버 인프라 구성한 이야기/index.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "src/content/posts/infra/FE개발자가 개발서버 인프라 구성한 이야기/index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "src/content/posts/infra/FE개발자가 개발서버 인프라 구성한 이야기/index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "src/content/posts/infra/FE개발자가 개발서버 인프라 구성한 이야기/index.md"
+              }
             }
           }
         ]
@@ -140,6 +148,9 @@
   },
   "active": "5efcb530bcd9096f",
   "lastOpenFiles": [
+    "src/content/posts/infra/FE개발자가 개발서버 인프라 구성한 이야기/image.png",
+    "src/content/posts/infra/FE개발자가 개발서버 인프라 구성한 이야기/Pasted image 20240512232703.png",
+    "src/content/posts/infra/FE개발자가 개발서버 인프라 구성한 이야기/Pasted image 20240510004646.png",
     "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요/스크린샷 2024-04-26 오전 12.25.18.png",
     "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요/index.md",
     "src/content/posts/community/어떤 개발자와 같이 일하고 싶으신가요",
