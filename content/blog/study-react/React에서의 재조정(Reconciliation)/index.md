@@ -1,9 +1,11 @@
 ---
 title: "React에서 Virtual DOM과 재조정(Reconciliation)"
-date: "2022-08-15T08:24:02.300Z"
+published: 2022-08-15T08:24:02.300Z
 description: React의 비교 알고리즘을 만들때 어떤 선택을 했는지 소개하는 글
+category: React
 tags:
   - React
+  - FE
 ---
 
 ## Virtual DOM

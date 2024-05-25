@@ -1,7 +1,9 @@
 ---
 title: BOJ-2460
-date: "2022-07-13T22:36:03.284Z"
+published: 2022-07-13
 description: 지능형 기차 2
+category: 코테
+draft: false
 tags:
   - 백준
   - 코딩테스트

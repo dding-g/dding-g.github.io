@@ -1,7 +1,9 @@
 ---
 title: "BOJ-2606 (바이러스)"
-date: "2022-07-12T17:12:03.284Z"
+published: 2022-07-12T17:12:03.284Z
 description: "[문제링크](https://www.acmicpc.net/problem/2606)"
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 백준

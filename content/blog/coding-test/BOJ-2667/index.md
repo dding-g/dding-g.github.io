@@ -1,7 +1,9 @@
 ---
 title: "BOJ-2667"
-date: "2022-07-20T13:47:28.313Z"
+published: 2022-07-20T13:47:28.313Z
 description: 단지번호붙이기 (https://www.acmicpc.net/problem/2667)
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 백준

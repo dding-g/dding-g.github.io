@@ -1,7 +1,9 @@
 ---
 title: "jQuery와 React의 차이점은 무엇인가요?"
-date: "2022-08-01T08:24:25.177Z"
+published: 2022-08-01T08:24:25.177Z
 description: jQquery vs React
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - 태그1
   - 태그2

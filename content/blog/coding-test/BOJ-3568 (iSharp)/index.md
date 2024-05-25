@@ -1,7 +1,9 @@
 ---
 title: "BOJ-3568 (iSharp)"
-date: "2022-08-06T01:21:47.966Z"
+published: 2022-08-06T01:21:47.966Z
 description: iSharp (https://www.acmicpc.net/problem/3568)
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 백준

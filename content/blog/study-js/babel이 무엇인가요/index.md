@@ -1,7 +1,9 @@
 ---
 title: "babel이 무엇인가요?"
-date: "2022-08-01T06:22:03.244Z"
+published: 2022-08-01T06:22:03.244Z
 description: babel이 무엇인가를 간단하게 풀어쓴 문서
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
   - Frontend

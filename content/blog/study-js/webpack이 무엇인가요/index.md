@@ -1,7 +1,9 @@
 ---
 title: "webpack이 무엇인가요?"
-date: "2022-08-01T06:50:42.928Z"
+published: 2022-08-01T06:50:42.928Z
 description: webpack이 무엇인지 간단하게 풀어 쓴 글
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
   - Frontend

@@ -1,7 +1,8 @@
 ---
 title: "컨테이닝 블록이 무엇인가요"
-date: "2022-08-15T04:36:03.560Z"
+published: 2022-08-15T04:36:03.560Z
 description: CSS 컨테이너닝 블록에 대해 간단히 풀어쓴 글
+category: 무엇인가요 시리즈
 tags:
   - CSS
 ---

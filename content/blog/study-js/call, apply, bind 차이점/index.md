@@ -1,7 +1,9 @@
 ---
 title: "call, apply, bind 차이점"
-date: "2022-07-29T07:37:32.634Z"
+published: 2022-07-29T07:37:32.634Z
 description: call, apply, bind의 차이점
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
 ---

@@ -1,7 +1,9 @@
 ---
 title: BOJ-2309
-date: "2022-07-13T14:04:54.000Z"
+published: 2022-07-13T14:04:54.000Z
 description: 일곱난쟁이
+category: 코테
+draft: false
 tags:
   - 백준
   - 코딩테스트

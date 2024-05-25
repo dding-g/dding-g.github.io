@@ -1,7 +1,9 @@
 ---
 title: 코딩테스트 로드맵
-date: "2022-07-14T01:04:54.000Z"
+published: 2022-07-14T01:04:54.000Z
 description: 코딩테스트 로드맵 정리
+category: 코테
+draft: false
 tags:
   - 코딩테스트
 ---

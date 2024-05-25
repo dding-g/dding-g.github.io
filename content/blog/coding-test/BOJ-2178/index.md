@@ -1,7 +1,9 @@
 ---
 title: "BOJ-2178"
-date: "2022-07-26T14:33:19.079Z"
+published: 2022-07-26T14:33:19.079Z
 description: <설명>
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 태그2

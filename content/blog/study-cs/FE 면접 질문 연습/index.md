@@ -1,7 +1,8 @@
 ---
 title: "FE 면접 질문 연습"
-date: "2022-07-15T12:04:15.612Z"
+published: 2022-07-15T12:04:15.612Z
 description: FE 개발자 이직 공부
+category: CS
 tags:
   - 이직
   - CS

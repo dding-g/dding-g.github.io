@@ -1,7 +1,9 @@
 ---
 title: "[프로그래머스]다리를 지나는 트럭"
-date: "2022-07-12T17:12:03.284Z"
+published: 2022-07-12T17:12:03.284Z
 description: "[문제링크](https://school.programmers.co.kr/learn/courses/30/lessons/42583)"
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 프로그래머스

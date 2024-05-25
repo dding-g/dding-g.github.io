@@ -1,7 +1,8 @@
 ---
 title: "첫 외주 개발기"
-date: "2022-08-02T04:45:11.625Z"
+published: 2022-08-02T04:45:11.625Z
 description: <설명>
+category: 외주
 tags:
   - 사이드프로젝트
 ---

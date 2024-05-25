@@ -1,7 +1,8 @@
 ---
 title: "[Vue] document 훑어보기 | 탬플릿 구문"
-date: "2022-07-26T06:00:37.041Z"
+published: 2022-07-26T06:00:37.041Z
 description: Vue guide를 훑어보고 정리한 문서
+category: Vue
 tags:
   - Vue
 ---

@@ -1,7 +1,9 @@
 ---
 title: "이벤트 루프는 무엇인가요?"
-date: "2022-07-15T13:05:33.679Z"
+published: 2022-07-15T13:05:33.679Z
 description: "이벤트 루프는 무엇인가요? 영상을 보고 정리한 글 (https://www.youtube.com/watch?v=8aGhZQkoFbQ)"
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - "Javascript"
 ---

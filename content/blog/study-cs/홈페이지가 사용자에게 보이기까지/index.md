@@ -1,7 +1,8 @@
 ---
 title: "홈페이지가 사용자에게 보이기까지"
-date: "2022-07-19T06:59:07.725Z"
+published: 2022-07-19T06:59:07.725Z
 description: 주소창에 www.google.com 을 검색하면 어떤 일이 일어날까?
+category: CS
 tags:
   - CS
 ---

@@ -1,7 +1,9 @@
 ---
 title: "BOJ-2581"
-date: "2022-07-15T13:53:32.957Z"
+published: 2022-07-15T13:53:32.957Z
 description: 소수 (https://www.acmicpc.net/problem/2581)
+category: 코테
+draft: false
 tags:
   - 백준
   - 코딩테스트

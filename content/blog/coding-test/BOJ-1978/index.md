@@ -1,7 +1,9 @@
 ---
 title: BOJ-1978
-date: "2022-07-14T00:04:54.000Z"
+published: 2022-07-14T00:04:54.000Z
 description: 소수 찾기(https://www.acmicpc.net/problem/1978)
+category: 코테
+draft: false
 tags:
   - 백준
   - 코딩테스트

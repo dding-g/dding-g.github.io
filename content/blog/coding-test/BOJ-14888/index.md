@@ -1,7 +1,9 @@
 ---
 title: "BOJ-14888"
-date: "2022-07-15T14:18:58.614Z"
+published: 2022-07-15T14:18:58.614Z
 description: 연산자 끼워넣기 (https://www.acmicpc.net/problem/14888)
+category: 코테
+draft: false
 tags:
   - 백준
   - 코딩테스트

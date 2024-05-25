@@ -1,6 +1,7 @@
 ---
 title: "[Vue] Vuex 정리"
-date: 2022-07-13T19:46:03.284Z
+published: 2022-07-13T19:46:03.284Z
+category: Vue
 tags:
   - "vue"
   - "vuex"

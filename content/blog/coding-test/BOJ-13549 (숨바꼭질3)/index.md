@@ -1,7 +1,9 @@
 ---
 title: "BOJ-13549 (숨바꼭질3)"
-date: "2022-07-28T14:53:59.526Z"
+published: 2022-07-28T14:53:59.526Z
 description: <설명>
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 태그2

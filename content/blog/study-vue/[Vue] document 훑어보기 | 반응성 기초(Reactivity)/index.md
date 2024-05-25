@@ -1,7 +1,8 @@
 ---
 title: "[Vue] document 훑어보기 | 반응성 기초(Reactivity)"
-date: "2022-07-26T09:42:40.631Z"
+published: 2022-07-26T09:42:40.631Z
 description: Vue guide를 훑어보고 정리한 문서
+category: Vue
 tags:
   - Vue
 ---

@@ -1,7 +1,9 @@
 ---
 title: "호이스팅이 무엇인가요"
-date: "2022-07-24T12:47:39.482Z"
+published: 2022-07-24T12:47:39.482Z
 description: Javascript의 호이스팅에 대한 글
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
 ---

@@ -1,7 +1,9 @@
 ---
 title: "Javascript에서의 모듈 시스템"
-date: "2022-07-22T06:36:37.733Z"
+published: 2022-07-22T06:36:37.733Z
 description: CommonJS와 ES Module에 대해.
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
 ---

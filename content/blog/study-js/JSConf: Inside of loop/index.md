@@ -1,7 +1,9 @@
 ---
 title: "JSConf: Inside of loop"
-date: "2022-07-16T10:40:51.587Z"
+published: 2022-07-16T10:40:51.587Z
 description: "Jake Archibald: 루프 속 - JSConf.Asia (https://www.youtube.com/watch?v=cCOL7MC4Pl0)"
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - JSConf
   - Javascript

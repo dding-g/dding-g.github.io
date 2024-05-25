@@ -1,7 +1,9 @@
 ---
 title: "클로저(Closure)가 무엇인가요"
-date: "2022-07-25T08:35:53.565Z"
+published: 2022-07-25T08:35:53.565Z
 description: 클로저(Closure)가 무엇인가요?
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
 ---

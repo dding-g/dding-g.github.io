@@ -1,7 +1,9 @@
 ---
 title: BOJ-10828
-date: "2022-06-14T20:09"
+published: 2022-06-14
 description: 백준 알고리즘 테스트 10828 스택문제(https://www.acmicpc.net/problem/10828)
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 백준

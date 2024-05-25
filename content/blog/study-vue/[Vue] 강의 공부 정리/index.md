@@ -1,7 +1,8 @@
 ---
 title: "[Vue] 강의 공부 정리"
-date: "2022-07-26T05:57:11.254Z"
+published: 2022-07-26T05:57:11.254Z
 description: https://github.com/dding-g/study-vue
+category: Vue
 tags:
   - vue
 ---

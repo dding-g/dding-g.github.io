@@ -1,7 +1,9 @@
 ---
 title: "폴리필(polyfill)이 무엇인가요"
-date: "2022-08-01T06:38:08.094Z"
+published: 2022-08-01T06:38:08.094Z
 description: 폴리필(polyfill)에 대해 간단하게 풀어 쓴 글
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
   - Frontend

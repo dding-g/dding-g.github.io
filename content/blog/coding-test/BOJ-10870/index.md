@@ -1,7 +1,9 @@
 ---
 title: BOJ-10870
-date: "2022-07-13T22:55:54.000Z"
+published: 2022-07-13T22:55:54.000Z
 description: 피보나치 수 5(https://www.acmicpc.net/problem/10870)
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 백준

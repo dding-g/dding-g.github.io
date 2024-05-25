@@ -1,7 +1,9 @@
 ---
 title: "Virtual DOM을 왜 사용하나요?"
-date: "2022-08-01T10:37:19.088Z"
+published: 2022-08-01T10:37:19.088Z
 description: Virtual DOM에 대해 간단하게 정리한 문서
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - React
   - Frontend

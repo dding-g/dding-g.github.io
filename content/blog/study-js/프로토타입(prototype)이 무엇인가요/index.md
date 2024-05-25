@@ -1,7 +1,9 @@
 ---
 title: "프로토타입(prototype)이 무엇인가요?"
-date: "2022-07-31T03:44:25.239Z"
+published: 2022-07-31T03:44:25.239Z
 description: Javascript에서 프로토타입은 무엇인가요?
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
 ---

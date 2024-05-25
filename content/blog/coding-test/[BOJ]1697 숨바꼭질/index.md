@@ -1,7 +1,9 @@
 ---
 title: "[BOJ]1697 숨바꼭질"
-date: "2022-07-12T17:12:03.284Z"
+published: 2022-07-12
 description: "[문제링크](https://www.acmicpc.net/problem/1697)"
+category: 코테
+draft: false
 tags:
   - "코딩테스트"
   - "백준"

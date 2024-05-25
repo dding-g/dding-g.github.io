@@ -1,7 +1,9 @@
 ---
 title: "스코프(Scope)가 무엇인가요?"
-date: "2022-07-29T11:49:11.850Z"
+published: 2022-07-29T11:49:11.850Z
 description: <설명>
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - 태그1
   - 태그2

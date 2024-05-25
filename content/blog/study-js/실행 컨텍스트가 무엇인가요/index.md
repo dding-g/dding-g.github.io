@@ -1,7 +1,9 @@
 ---
 title: "실행 컨텍스트가 무엇인가요?"
-date: "2022-07-31T07:04:19.298Z"
+published: 2022-07-31T07:04:19.298Z
 description: 실행 컨텍스트가 무엇인가요
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
 ---

@@ -1,7 +1,9 @@
 ---
 title: "BOJ-16953 (A → B)"
-date: "2022-07-27T15:02:18.834Z"
+published: 2022-07-27T15:02:18.834Z
 description: <설명>
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 백준

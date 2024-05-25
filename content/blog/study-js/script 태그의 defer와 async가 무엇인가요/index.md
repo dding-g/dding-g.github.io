@@ -1,7 +1,9 @@
 ---
 title: "<script>의 defer와 async가 무엇인가요"
-date: "2022-08-15T05:25:11.841Z"
+published: 2022-08-15T05:25:11.841Z
 description: script 태그의 defer, async의 차이에 대해 풀어쓴 글
+category: 무엇인가요 시리즈
+draft: false
 tags:
   - Javascript
 ---

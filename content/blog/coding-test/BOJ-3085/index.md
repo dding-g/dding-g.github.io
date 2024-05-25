@@ -1,7 +1,9 @@
 ---
 title: "BOJ-3085"
-date: "2022-07-19T13:42:54.357Z"
+published: 2022-07-19T13:42:54.357Z
 description: 사탕 게임 (https://www.acmicpc.net/problem/3085)
+category: 코테
+draft: false
 tags:
   - 코딩테스트
   - 백준

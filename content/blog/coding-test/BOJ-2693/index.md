@@ -1,7 +1,9 @@
 ---
 title: BOJ-2693
-date: "2022-07-14T00:12:03.284Z"
+published: 2022-07-14T00:12:03.284Z
 description: N번쨰 큰 수 (https://www.acmicpc.net/problem/2693)
+category: 코테
+draft: false
 tags:
   - 백준
   - 코딩테스트
