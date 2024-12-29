@@ -198,11 +198,7 @@ data() {
 이중 중괄호 내에서 사용되는 표현식에서 선언, 제어문 처리는 **불가하다.**
 
 ```html
-<!-- this is a statement, not an expression: -->
-{{ var a = 1 }}
-
-<!-- flow control won't work either, use ternary expressions -->
-{{ if (ok) { return message } }}
+{{ var a = 1 }} {{ if (ok) { return message } }}
 ```
 
 표현식 내부에서는 [제한된 전역 목록](https://github.com/vuejs/core/blob/main/packages/shared/src/globalsWhitelist.ts#L3)만 전역 객체로 접근이 가능하다.
@@ -217,7 +213,6 @@ data() {
 ```html
 <a v-on:click="doSomething"> ... </a>
 
-<!-- shorthand -->
 <a @click="doSomething"> ... </a>
 ```
 
@@ -226,13 +221,8 @@ data() {
 대괄호로 감싸서 지시문 인수에서 Javascript 표현식을 쓸 수 있다.
 
 ```html
-<!--
-Note that there are some constraints to the argument expression,
-as explained in the "Dynamic Argument Value Constraints" and "Dynamic Argument Syntax Constraints" sections below.
--->
 <a v-bind:[attributeName]="url"> ... </a>
 
-<!-- shorthand -->
 <a :[attributeName]="url"> ... </a>
 ```
 
@@ -243,7 +233,6 @@ as explained in the "Dynamic Argument Value Constraints" and "Dynamic Argument S
 ```html
 <a v-on:[eventName]="doSomething"> ... </a>
 
-<!-- shorthand -->
 <a @[eventName]="doSomething"></a>
 ```
 

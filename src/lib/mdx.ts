@@ -1,11 +1,11 @@
 import path from "path";
 import matter from "gray-matter";
 import fg from "fast-glob";
-import { serialize } from "next-mdx-remote/serialize";
 import rehypeSlug from "rehype-slug";
 import rehypeHighlight from "rehype-highlight";
 import remarkGfm from "remark-gfm";
 import fs from "node:fs/promises";
+import { dateUtil } from "@/utils/date";
 
 const postsDirectory = path.join(process.cwd(), "src/content");
 
@@ -23,7 +23,16 @@ export interface Post {
   content: string;
 }
 
-export async function getPostSlugs() {
+export async function getPostSlugs(keyword?: string) {
+  if (!!keyword) {
+    const paths = await fg(`**/*${keyword}*/`, {
+      cwd: postsDirectory,
+      onlyDirectories: true,
+    });
+    console.log(paths, postsDirectory);
+    return paths.map((slug) => path.join(slug, "index.md"));
+  }
+
   const paths = await fg("**/*.md", {
     cwd: postsDirectory,
     onlyFiles: true,
@@ -44,11 +53,11 @@ function validateAndFormatDate(dateStr: string): string {
     const date = new Date(dateStr);
     if (isNaN(date.getTime())) {
       // 유효하지 않은 날짜인 경우 현재 날짜 반환
-      return new Date().toISOString();
+      return dateUtil(new Date()).format("YYYY. MM. DD");
     }
-    return date.toISOString();
+    return dateUtil(date).format("YYYY. MM. DD");
   } catch {
-    return new Date().toISOString();
+    return dateUtil(new Date()).format("YYYY. MM. DD");
   }
 }
 
@@ -74,15 +83,10 @@ export async function getPostBySlug(slug: string): Promise<Post> {
 // 캐시 설정 추가
 export const revalidate = 3600; // 1시간마다 재검증
 
-export async function getAllPosts(): Promise<Post[]> {
+export async function getAllPosts(keyword?: string): Promise<Post[]> {
   try {
-    const slugs = await getPostSlugs();
-    const posts = await Promise.all(
-      slugs.map(async (slug) => {
-        const post = await getPostBySlug(slug);
-        return post;
-      })
-    );
+    const slugs = await getPostSlugs(keyword);
+    const posts = await Promise.all(slugs.map(getPostBySlug));
 
     // null 값 필터링 추가
     return posts
@@ -95,16 +99,6 @@ export async function getAllPosts(): Promise<Post[]> {
     console.error("Failed to get posts:", error);
     return [];
   }
-}
-
-export async function serializeMdx(source: string) {
-  const mdxSource = await serialize(source, {
-    mdxOptions: {
-      remarkPlugins: [remarkGfm],
-      rehypePlugins: [rehypeSlug, rehypeHighlight],
-    },
-  });
-  return mdxSource;
 }
 
 export function searchPosts(query: string, posts: Post[]): Post[] {

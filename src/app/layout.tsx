@@ -1,23 +1,20 @@
 import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
-import { MainNav } from "@/components/main-nav";
-import { ModeToggle } from "@/components/mode-toggle";
-import { ApolloWrapper } from "@/lib/apollo-wrapper";
+import { MainHeader } from "@/components/main-header";
 import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "DDing Blog",
-    template: "%s | DDing Blog",
+    default: "dding-g Blog",
+    template: "%s | dding-g Blog",
   },
-  description: "개발과 일상을 기록하는 블로그",
+  description: "개발 블로그",
   openGraph: {
-    title: "DDing Blog",
+    title: "dding-g Blog",
     description: "개발과 일상을 기록하는 블로그",
     url: "https://your-domain.com",
-    siteName: "DDing Blog",
+    siteName: "dding-g Blog",
     locale: "ko_KR",
     type: "website",
   },
@@ -29,21 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="ko">
       <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <ApolloWrapper>
-            <div className="flex flex-col min-h-screen">
-              <header className="container z-40 bg-background">
-                <div className="flex items-center justify-between h-20 py-6">
-                  <MainNav />
-                  <ModeToggle />
-                </div>
-              </header>
-              <main className="flex-1">{children}</main>
-            </div>
-          </ApolloWrapper>
-        </ThemeProvider>
+        <div className="min-h-screen">
+          <MainHeader />
+          <main className="flex-1">{children}</main>
+        </div>
       </body>
     </html>
   );

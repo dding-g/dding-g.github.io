@@ -1,5 +1,5 @@
 import { Post } from "@/components/post";
-import { getPostBySlug, getAllPosts, serializeMdx } from "@/lib/mdx";
+import { getPostBySlug, getAllPosts } from "@/lib/mdx";
 
 export async function generateStaticParams() {
   const posts = await getAllPosts();
@@ -41,7 +41,6 @@ export default async function PostPage({
   if (!meta || !content) {
     return <></>;
   }
-  const mdxSource = await serializeMdx(content);
 
-  return <Post mdxSource={mdxSource} meta={meta} />;
+  return <Post content={content} meta={meta} />;
 }
